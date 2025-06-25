@@ -1,0 +1,83 @@
+.nav-item {
+    display: flex;
+    align-items: center;
+    color: white !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border-radius: 2rem;
+    pointer-events: auto;
+}
+
+.glass {
+    box-shadow: none !important
+}
+
+.nav-item:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    overflow: visible !important;
+}
+
+.label {
+    text-decoration: none;
+    color: white; 
+    margin-left: 6px;
+    margin-right: 14px;
+
+    white-space: nowrap;
+    display: none;
+}
+
+.tippy-tooltip-content {
+    color: white;
+    font-size: 0.98rem;
+    font-weight: 700;
+    margin-left: 20px;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.05);
+    backdrop-filter: saturate(180%) blur(10px);
+}
+
+.sidebar-glass:hover {
+    scale: 1.2;
+}
+
+.sidebar-glass:hover ~ span {
+    scale: 1.2;
+}
+
+.sidebar-glass:hover .nav-item.active {
+    background-color: rgba(0,0,0,0.05);
+    transition: all 0.2 ease;
+}
+
+.sidebar-glass:hover .nav-item.active .icon {
+    background-color: rgba(255, 255, 255, 0.0);
+    transition: all 0.2 ease;
+}
+
+.nav-item.active .icon {
+    background-color: rgba(0,0,0,0.05);
+    transition: all 0.2 ease;
+}
+
+.nav-item:hover {
+    background-color: rgba(0,0,0,0.05);
+    transition: all 0.2 ease;
+}
+
+.nav-item.active:hover .icon {
+    background-color: rgba(255, 255, 255, 0.0);
+    transition: all 0.2 ease;
+}

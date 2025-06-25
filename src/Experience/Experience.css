@@ -1,0 +1,40 @@
+.exp-container {
+    height: 100vh;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    overflow-x: auto;
+}
+
+.exp-tile-container {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    padding: 20vh;
+    width: 100%;
+    top: 50%;
+}
+
+
+.exp-tile {
+    height: 60vh;
+  flex: 0 0 auto; 
+  width: 400px;   
+  border-radius: 8px;
+  background: rgba(0,0,0,1);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.exp-tile:last-child  {
+    width: 100px;
+    opacity: 0;
+}
+
+.exp-tile img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
