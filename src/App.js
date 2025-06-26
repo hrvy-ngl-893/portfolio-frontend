@@ -1,17 +1,23 @@
 import './App.css'
 import Main from './Main/Main.js';
 import './App.css';
+import 'devicon';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Sidebar from './Navigation/Sidebar.js';
-
+import Bottombar from './Navigation/Bottombar.js';
 
 import Projects from './Projects/Projects.js'
 import Experience from './Experience/Experience.js'
 import Blog from './Blog/Blog.js'
 import Resources from './Resources/Resources.js'
 
+import useIsMobile from './hooks/useIsMobile';
+
 function App() {
+
+    const isMobile = useIsMobile();
+
   return (
     <BrowserRouter>
 
@@ -25,7 +31,7 @@ function App() {
           </Routes>
         
       </div>
-      <Sidebar/>
+{isMobile ? <Bottombar /> : <Sidebar />}
     </BrowserRouter>
     
   );
