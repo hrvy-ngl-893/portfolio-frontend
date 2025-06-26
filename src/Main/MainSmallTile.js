@@ -2,7 +2,7 @@ import './Main.css';
 import React, { useMemo } from 'react';
 
 
-function MainSmallTile({ title, content, image, gradient1, gradient2, icon = [], color }) {
+function MainSmallTile({ title, content, image, gradient1, gradient2, icon = [], lucide = [], color }) {
     return (
         <>
             <div className="tile small">
@@ -22,6 +22,12 @@ function MainSmallTile({ title, content, image, gradient1, gradient2, icon = [],
                                 style={{ marginRight: '8px' }}
                             />
                         ))}
+                    </div>
+                    <div className="tile-icons">
+                        {lucide.map((IconComponent, index) => (
+                            <IconComponent key={index} className="lucide-icon" />
+                        ))}
+
                     </div>
                     <h1 className='tile-h1'>{title}</h1>
                     <p className='tile-p'>{content}</p>

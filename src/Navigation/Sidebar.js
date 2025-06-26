@@ -11,7 +11,6 @@ const navItems = [
     { path: '/', icon: <House size={36}/>, label: 'Harvy Angelo D. Tan' },
     { path: '/projects', icon: <Briefcase size={36}/>, label: 'Projects' },
     { path: '/experience', icon: <FileStack size={36}/>, label: 'Experience' },
-    { path: '/blog', icon: <Newspaper size={36}/>, label: 'Blog' },
     { path: '/resources', icon: <SquareMenu size={36}/>, label: 'Resources' },
 ];
 
@@ -31,15 +30,12 @@ function Sidebar() {
         <div className='two-container'>
             <LiquidGlass
                 style={{
-
                     position: 'fixed',
                     top: '50%',
                     left: '70px',
                     zIndex: 10,
                     background: 'rgba(0,0,0,0.03)',
                     borderRadius: 60,
-                    // border: '2px solid rgba(255,255,255,0.5)',
-                    boxShadow: '0px 0px 0px rgba(0,0,0,0.1)'
                 }}
 
                 elasticity={0.5}

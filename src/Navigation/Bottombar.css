@@ -1,48 +1,56 @@
-
-.nav-item2 {
-    align-items: center;
-    color: white !important;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-
-    pointer-events: auto;
-    font: 8px;
+.bottom-bar .glass {
+    padding: 8px 8px !important;
+    gap: 1rem;
+    vertical-align: middle;
 }
 
-.bottombar-glass .glass {
-    box-shadow: none !important;
+.bottom-bar {
+    display: inline;
+    vertical-align: middle;
 }
 
+.bottom-bar:hover {
+    scale: 1.2;
+    transition: all 0.2 ease;
+}
 
-.icon2 {
+.bottom-bar:hover~span {
+    scale: 1.2;
+    transition: all 0.2 ease;
+}
+
+.btm-nav-item  {
+    border-radius: 60px;
+    padding: 0.5rem;
     float: left;
-            display: block;
-                padding: 0.5rem;
-    margin: 0.3rem;
-    border-radius: 2rem;
+    color: white;
+    text-decoration: none;
 }
 
-
-.bottombar-glass:hover {
-    scale: 1.05;
+.btm-nav-item  {
+    margin-right: 10px;
 }
 
-.bottombar-glass:hover~span {
-    scale: 1.05;
+.btm-nav-item :first-of-type {
+    margin-left: 0;
 }
 
+.btm-nav-item:last-of-type {
+    margin-right: 0px;
+}
 
-
-
-
-.nav-item2.active2 .icon2 {
-    background-color: rgba(0,0,0,0.05);
+.btm-nav-item.btm-active  {
+    background-color: rgba(0,0,0,0.1);
     transition: all 0.2 ease;
 }
 
-.nav-item2:hover .icon2 {
-    background-color: rgba(0,0,0,0.05);
+.btm-nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
     transition: all 0.2 ease;
 }
 
+
+.btm-nav-item.btm-active:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.2 ease;
+}

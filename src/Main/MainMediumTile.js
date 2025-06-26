@@ -2,19 +2,38 @@ import './Main.css';
 import React, { useMemo } from 'react';
 
 
-function MainMediumTile({title, content, image}) {
+function MainMediumTile({ title, content, image, gradient1, gradient2, icon = [], lucide = [], color }) {
 
 
     return (
     <>
-    <div className="tile medium" style={{backgroundImage: `url(${image})`}}>
-        <div className="tile-overlay" >
-            <div className="tile-content">
-                <div className='medium-spacer'></div>
-                <h1 className='tile-h1'>{title}</h1>
-                <p className='tile-p'>{content}</p>
-            </div>
-        </div>
+    <div className="tile medium">
+        <div className="tile-overlay"
+                    style={{
+                        background: `linear-gradient(to bottom,  ${gradient1}, ${gradient2}`
+                    }} />
+                <div className="tile-image-mask"
+                    style={{ backgroundImage: `url(${image})` }}
+                />
+                <div className="tile-content" style={{ color: color }}>
+                    <div className="tile-icons">
+                        {icon.map((i, index) => (
+                            <i
+                                key={index}
+                                className={`devicon-${i}-plain`}
+                                style={{ marginRight: '8px' }}
+                            />
+                        ))}
+                    </div>
+                    <div className="tile-icons">
+                        {lucide.map((IconComponent, index) => (
+                            <IconComponent key={index} className="lucide-icon" />
+                        ))}
+
+                    </div>
+                    <h1 className='tile-h1'>{title}</h1>
+                    <p className='tile-p'>{content}</p>
+                </div>
     </div>
     </>
     );

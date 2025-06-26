@@ -9,10 +9,6 @@
     pointer-events: auto;
 }
 
-.glass {
-    box-shadow: none !important
-}
-
 .nav-item:not(:last-child) {
     margin-bottom: 0.5rem;
 }
