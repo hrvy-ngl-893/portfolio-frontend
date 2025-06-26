@@ -1,0 +1,9 @@
+.toggle-glass:hover{
+    scale: 1.2;
+    transition: all 0.4s ease;
+}
+
+.toggle-glass:hover~span{
+    scale: 1.2;
+    transition: all 0.4s ease;
+}

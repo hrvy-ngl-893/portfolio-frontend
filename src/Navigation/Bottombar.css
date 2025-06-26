@@ -5,21 +5,25 @@
 }
 
 .bottom-bar {
-    display: inline;
+    transform-origin: center;
+    margin-left: 0px;
     vertical-align: middle;
+    transition: transform 0.2s ease;
 }
 
 .bottom-bar:hover {
     scale: 1.2;
+    margin-left: 20px;
     transition: all 0.2 ease;
 }
 
 .bottom-bar:hover~span {
     scale: 1.2;
+    margin-left: 20px;
     transition: all 0.2 ease;
 }
 
-.btm-nav-item  {
+.btm-nav-item {
     border-radius: 60px;
     padding: 0.5rem;
     float: left;
@@ -27,7 +31,7 @@
     text-decoration: none;
 }
 
-.btm-nav-item  {
+.btm-nav-item {
     margin-right: 10px;
 }
 
@@ -39,8 +43,8 @@
     margin-right: 0px;
 }
 
-.btm-nav-item.btm-active  {
-    background-color: rgba(0,0,0,0.1);
+.btm-nav-item.btm-active {
+    background-color: rgba(0, 0, 0, 0.1);
     transition: all 0.2 ease;
 }
 

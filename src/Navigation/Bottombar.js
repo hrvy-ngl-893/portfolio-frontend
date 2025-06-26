@@ -1,11 +1,9 @@
-import { NavLink, useLocation } from 'react-router-dom';
-import { useEffect, useState, useRef } from 'react';
+import { NavLink,  } from 'react-router-dom';
 import LiquidGlass from 'liquid-glass-react'
-import { Tooltip } from 'react-tippy';
 
 import './Bottombar.css';
 
-import { House, Briefcase, FileStack, Newspaper, SquareMenu } from 'lucide-react';
+import { House, Briefcase, FileStack, SquareMenu } from 'lucide-react';
 
 const navItems = [
     { path: '/', icon: <House size={24} />, label: 'Harvy Angelo D. Tan' },
@@ -21,15 +19,17 @@ function Bottombar() {
             <LiquidGlass
                 style={{
                     top: '92%',
-                    left: '50%',
-                    float: 'left',
+                    left: '45%',
+                    transform: 'translate(-50%, 0%)',
+                    transformOrigin: 'center',
                     position: 'fixed',
+                    display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'center',
                     zIndex: 10,
                     background: 'rgba(0,0,0,0.03)',
                     borderRadius: '60px',
-
+                    width: '206px'
                     // boxShadow: '0px 0px 0px rgba(0,0,0,0.1)'
                 }}
 

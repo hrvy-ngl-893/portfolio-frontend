@@ -17,6 +17,14 @@ const navItems = [
 function Sidebar() {
     const [isExpanded, setIsExpanded] = useState(true);
     const [showLabel, setShowLabel] = useState(true);
+   const [isHover, setIsHover] = useState(false);
+
+   const handleMouseEnter = () => {
+      setIsHover(true);
+   };
+   const handleMouseLeave = () => {
+      setIsHover(false);
+   };
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -27,15 +35,18 @@ function Sidebar() {
     }, []);
 
     return (
-        <div className='two-container'>
+        <div className='two-container'
+        onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}>
             <LiquidGlass
                 style={{
                     position: 'fixed',
                     top: '50%',
                     left: '70px',
+                    transform: 'translate(-50%, -50%)',
                     zIndex: 10,
                     background: 'rgba(0,0,0,0.03)',
-                    borderRadius: 60,
+                    borderRadius: '32px',
                 }}
 
                 elasticity={0.5}
@@ -43,7 +54,7 @@ function Sidebar() {
                 blurAmount={0.1}
                 saturation={140}
                 aberrationIntensity={3}
-                cornerRadius={60}
+                cornerRadius={32}
                 padding="8px"
 
                 className={`sidebar-glass`}>
@@ -58,26 +69,22 @@ function Sidebar() {
                                 isActive ? "nav-item active" : "nav-item"
                             }
                         >
-                            <Tooltip
-                                title={item.label}
-                                position="right"
-                                className=''
-                                distance={30}
-                                interactiveBorder={4}
-                                duration={700}
-                                animation='perspective'
-                            >
-                            <span className="icon"
-                            style = {{
-                                width: '24px',
-                                height: '24px'
-                            }}
-                            >{item.icon}</span>
-                            
-                            <span className="label"
-                            >{item.label}</span>
-                             </Tooltip>
+                         <Tooltip
+                            title={item.label}
+                            position="right"
+                            distance={300}
+                            interactiveBorder={4}
+                            duration={700}
+                            animation='perspective'
+                        >
+                        <span className="icon"
+                        style = {{
+                            width: '24px',
+                            height: '24px'
+                        }}
+                        >{item.icon}</span>
 
+                        </Tooltip>
                         </NavLink>
                     )
                 ))}

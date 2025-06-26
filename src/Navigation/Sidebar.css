@@ -34,7 +34,6 @@
     margin-right: 14px;
 
     white-space: nowrap;
-    display: none;
 }
 
 .tippy-tooltip-content {
@@ -57,27 +56,20 @@
     scale: 1.2;
 }
 
-.sidebar-glass:hover .nav-item.active {
-    background-color: rgba(0,0,0,0.05);
+.sidebar-glass:hover .nav-item.active .icon {
+    background-color: rgba(0,0,0,0.1);
     transition: all 0.2 ease;
 }
 
-.sidebar-glass:hover .nav-item.active .icon {
-    background-color: rgba(255, 255, 255, 0.0);
-    transition: all 0.2 ease;
-}
+
 
 .nav-item.active .icon {
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.1);
     transition: all 0.2 ease;
 }
 
-.nav-item:hover {
-    background-color: rgba(0,0,0,0.05);
+.nav-item:hover .icon  {
+    background-color: rgba(0,0,0,0.1);
     transition: all 0.2 ease;
 }
 
-.nav-item.active:hover .icon {
-    background-color: rgba(255, 255, 255, 0.0);
-    transition: all 0.2 ease;
-}
