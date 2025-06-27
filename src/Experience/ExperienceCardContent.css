@@ -1,0 +1,229 @@
+:root[data-theme='light'] {
+    --card-gradient-light: rgb(227, 240, 240);
+    --card-text-light: white;
+}
+
+:root[data-theme='dark'] {
+    --card-gradient-light: #121212;
+    --card-text-dark: black;
+}
+
+.exp-card-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 2rem;
+}
+
+.exp-card-container>div:first-child {
+    padding-left: 70vh;
+}
+
+
+.exp-card-container>div:last-child {
+    padding-right: 70vh;
+}
+
+.exp-card {
+    position: relative;
+    text-align: left;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex;
+    border-radius: 16px;
+    width: 410px;
+    height: 74vh;
+    text-shadow: 0px 0px 14px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+.exp-card>div {
+    scroll-snap-align: center;
+    flex: 1;
+}
+
+
+.card-link {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.card-link a {
+    padding: 8px 12px;
+    background-color: rgba(0, 136, 255, 0.5);
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+}
+
+.card-spacer {
+    flex-grow: 1;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    padding: 24px;
+    color: black;
+}
+
+.lucide-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.card-tags {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 12px;
+    gap: 0.5rem;
+    flex-wrap: wrap;  
+}
+
+.tag {
+    padding: 4px 6px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 14px;
+}
+
+.date {
+    background-color: rgba(114, 179, 236, 0.50);
+}
+
+.cart-subtitle {
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(240,240,240);
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    margin: 0px 0px 4px 0px;
+}
+
+
+.Seminar {
+    background-color: rgba(220, 42, 255, 0.5);
+}
+
+.Event {
+    background-color: rgba(42, 63, 255, 0.5);
+}
+
+.Leadership {
+    background-color: rgba(139, 125, 67, 0.5);
+}
+
+.Volunteer {
+    background-color: rgba(255, 42, 42, 0.5);
+}
+
+.Competition {
+    background-color: rgba(255, 42, 42, 0.5);
+}
+
+.Education {
+    background-color: rgba(43, 130, 56, 0.5);
+}
+
+.Certification {
+    background-color: rgba(252, 202, 0, 0.5);
+}
+
+.Job {
+    background-color: rgba(99, 98, 95, 0.5);
+}
+
+.Programming {
+    background-color: rgba(15, 197, 194, 0.5);
+}
+
+.Research {
+    background-color: rgba(193, 61, 173, 0.5);
+}
+
+.Interpersonal {
+    background-color: rgba(0, 220, 15, 0.5);
+}
+
+.Speaking {
+    background-color: rgba(96, 57, 213, 0.5);
+}
+
+.Music {
+    background-color: rgba(255, 72, 118, 0.5);
+}
+
+.Art {
+    background-color: rgba(211, 117, 16, 0.5);
+}
+
+.Writing {
+    background-color: rgba(137, 255, 27, 0.5);
+}
+
+.Photography {
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+.Design {
+    background-color: rgba(28, 255, 153, 0.5);
+}
+
+.Academics {
+    background-color: rgba(81, 56, 25, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: 16px;
+}
+
+.card-image-mask {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 50%,
+            rgba(0, 0, 0, 0) 80%);
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 50%,
+            rgba(0, 0, 0, 0) 80%);
+    z-index: 0;
+    border-radius: 16px;
+}

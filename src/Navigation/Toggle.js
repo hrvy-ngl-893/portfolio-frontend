@@ -17,8 +17,8 @@ function Toggle({ theme, setTheme }) {
             <LiquidGlass
                 style={{
                     position: 'fixed',
-                    top: '80px',
-                    left: 'calc(100% - 80px)',
+                    top: 'calc(100% - 50px)',
+                    left: '50px',
                     zIndex: 10,
                     background: 'rgba(0,0,0,0.03)',
                     transform: 'translate(-50%, -50%)',
@@ -33,12 +33,11 @@ function Toggle({ theme, setTheme }) {
                 cornerRadius={32}
                 padding="16px"
 
-
                 className={`toggle-glass`}>
 
                 {theme === 'dark'
-                    ? <Sun style={{ color: 'white', cursor: 'pointer' }} />
-                    : <Moon style={{ color: 'white', cursor: 'pointer' }} />}
+                    ? <Moon style={{ color: `${theme === 'light' ? 'black' : 'white'}`, cursor: 'pointer' }} />
+                    : <Sun style={{ color: `${theme === 'light' ? 'black' : 'white'}`, cursor: 'pointer' }} />}
             </LiquidGlass>
         </div>
     );

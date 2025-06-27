@@ -31,7 +31,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Main />} />
                     <Route path='/projects' element={<Projects />} />
-                    <Route path='/experience' element={<Experience />} />
+                    <Route path='/experience' element={<Experience theme={theme} />} />
                     <Route path='/resources' element={<Resources />} />
                 </Routes>
             </div>

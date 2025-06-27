@@ -7,3 +7,16 @@
     scale: 1.2;
     transition: all 0.4s ease;
 }
+
+:root[data-theme='light'] {
+    --clr: black;
+}
+
+:root[data-theme='dark'] {
+    --clr: white;
+}
+@media screen and (max-width: 908px) {
+    .toggle-glass svg{
+        color: var(--clr);
+    }
+}

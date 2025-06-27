@@ -19,11 +19,11 @@ function Bottombar() {
             <LiquidGlass
                 style={{
                     top: '92%',
-                    left: '45%',
+                    left: '48%',
                     transform: 'translate(-50%, 0%)',
                     transformOrigin: 'center',
                     position: 'fixed',
-                    display: 'flex',
+                    display: 'inline',
                     flexDirection: 'row',
                     justifyContent: 'center',
                     zIndex: 10,

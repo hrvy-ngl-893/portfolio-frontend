@@ -8,23 +8,23 @@ import './Sidebar.css';
 import { House, Briefcase, FileStack, Newspaper, SquareMenu } from 'lucide-react';
 
 const navItems = [
-    { path: '/', icon: <House size={36}/>, label: 'Harvy Angelo D. Tan' },
-    { path: '/projects', icon: <Briefcase size={36}/>, label: 'Projects' },
-    { path: '/experience', icon: <FileStack size={36}/>, label: 'Experience' },
-    { path: '/resources', icon: <SquareMenu size={36}/>, label: 'Resources' },
+    { path: '/', icon: <House size={36} />, label: 'Harvy Angelo D. Tan' },
+    { path: '/projects', icon: <Briefcase size={36} />, label: 'Projects' },
+    { path: '/experience', icon: <FileStack size={36} />, label: 'Experience' },
+    { path: '/resources', icon: <SquareMenu size={36} />, label: 'Resources' },
 ];
 
 function Sidebar() {
     const [isExpanded, setIsExpanded] = useState(true);
     const [showLabel, setShowLabel] = useState(true);
-   const [isHover, setIsHover] = useState(false);
+    const [isHover, setIsHover] = useState(false);
 
-   const handleMouseEnter = () => {
-      setIsHover(true);
-   };
-   const handleMouseLeave = () => {
-      setIsHover(false);
-   };
+    const handleMouseEnter = () => {
+        setIsHover(true);
+    };
+    const handleMouseLeave = () => {
+        setIsHover(false);
+    };
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -36,16 +36,16 @@ function Sidebar() {
 
     return (
         <div className='two-container'
-        onMouseEnter={handleMouseEnter}
+            onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
             <LiquidGlass
                 style={{
                     position: 'fixed',
                     top: '50%',
-                    left: '70px',
+                    left: '50px',
                     transform: 'translate(-50%, -50%)',
                     zIndex: 10,
-                    background: 'rgba(0,0,0,0.03)',
+                    background: 'rgba(0,0,0,0.08)',
                     borderRadius: '32px',
                 }}
 
@@ -61,7 +61,7 @@ function Sidebar() {
 
                 {navItems.map((item) => (
                     item.path && (
-                        
+
                         <NavLink
                             key={item.path}
                             to={item.path}
@@ -69,22 +69,22 @@ function Sidebar() {
                                 isActive ? "nav-item active" : "nav-item"
                             }
                         >
-                         <Tooltip
-                            title={item.label}
-                            position="right"
-                            distance={300}
-                            interactiveBorder={4}
-                            duration={700}
-                            animation='perspective'
-                        >
-                        <span className="icon"
-                        style = {{
-                            width: '24px',
-                            height: '24px'
-                        }}
-                        >{item.icon}</span>
+                            <Tooltip
+                                title={item.label}
+                                position="right"
+                                distance={300}
+                                interactiveBorder={4}
+                                duration={700}
+                                animation='perspective'
+                            >
+                                <span className="icon"
+                                    style={{
+                                        width: '24px',
+                                        height: '24px'
+                                    }}
+                                >{item.icon}</span>
 
-                        </Tooltip>
+                            </Tooltip>
                         </NavLink>
                     )
                 ))}

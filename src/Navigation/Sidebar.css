@@ -1,12 +1,13 @@
 .nav-item {
     display: flex;
     align-items: center;
-    color: white !important;
+    mix-blend-mode: difference;
     text-decoration: none;
     transition: all 0.3s ease;
     white-space: nowrap;
     border-radius: 2rem;
     pointer-events: auto;
+    color: var(--clr);
 }
 
 .nav-item:not(:last-child) {
@@ -22,14 +23,13 @@
 
     overflow: visible !important;
     text-decoration: none;
-    color: white; 
+
     
     transition: all 0.3s ease;
 }
 
 .label {
     text-decoration: none;
-    color: white; 
     margin-left: 6px;
     margin-right: 14px;
 
@@ -37,7 +37,7 @@
 }
 
 .tippy-tooltip-content {
-    color: white;
+    color: var(--clr);
     font-size: 0.98rem;
     font-weight: 700;
     margin-left: 20px;
@@ -73,3 +73,15 @@
     transition: all 0.2 ease;
 }
 
+:root[data-theme='light'] {
+    --clr: black;
+}
+
+:root[data-theme='dark'] {
+    --clr: white;
+}
+@media screen and (max-width: 908px) {
+    .btm-nav-item {
+        color: var(--clr);
+    }
+}

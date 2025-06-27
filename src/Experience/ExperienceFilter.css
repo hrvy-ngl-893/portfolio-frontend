@@ -1,0 +1,76 @@
+.filter-options {
+    color: var(--clr);
+    text-align: left;
+    padding-left: 4px;
+    vertical-align: middle; 
+}
+
+.filter-options label {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.filter-options label select {
+    margin: 0px 20px 0px 20px;
+    padding: 4px 6px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+color: var(--clr);
+    font-size: 14px;
+}
+
+.filter-options label select .select-default {
+    color: gray !important;
+}
+
+.filter-tags-container {
+    margin: 10px 0px 0px 0px;
+}
+
+.filter-tags-container  {
+    font-size: 14px;
+}
+
+.filter-tags-container span  {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.filter-tags-container label  {
+
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+color: var(--clr);
+    font-size: 14px;
+    gap: 0.5rem; 
+    font-weight: normal;
+    vertical-align: middle;
+    appearance: none;
+
+    align-items: center; /* This aligns the checkbox and text vertically */
+  gap: 0.5rem;
+}
+
+.filter-tags-container input {
+    margin-bottom: 4px;
+}
+
+.sort-label {
+    width: 206px;
+    display: flex;
+    flex-direction: row;
+}
+
+.filter-icon {
+
+    vertical-align: middle;
+
+}
+.filter-glass svg {
+    color: var(--clr);
+}

@@ -40,8 +40,8 @@ function BottomToggle({ theme, setTheme }) {
             className={`toggle-glass`}>
 
             {theme === 'dark'
-                ? <Sun style={{ color: 'white', cursor: 'pointer' }} />
-                : <Moon style={{ color: 'white', cursor: 'pointer' }} />}
+                ? <Moon style={{ color: `${theme === 'light' ? 'black' : 'white'}`, cursor: 'pointer' }} />
+                : <Sun style={{ color: `${theme === 'light' ? 'black' : 'white'}`, cursor: 'pointer' }} />}
         </LiquidGlass>
     </div>
     );
