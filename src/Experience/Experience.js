@@ -12,7 +12,7 @@ const cards = [
         title: 'SSC President',
         content: 'Served T.I.P. Manila\'s students as the chief executive of the Supreme Student Council for A.Y. 2024-2025.',
         date: 2024,
-        image: '/images/wave.jpeg',
+        image: '/images/gavel.png',
         gradient1: 'rgb(141, 135, 129) 100%',
         gradient2: 'rgba(105, 94, 83,1) 100%',
         lucide: [School, Scale],

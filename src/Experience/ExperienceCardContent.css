@@ -26,7 +26,6 @@
     padding-left: 70vh;
 }
 
-
 .exp-card-container>div:last-child {
     padding-right: 70vh;
 }
@@ -39,8 +38,8 @@
     flex-direction: column;
     justify-content: flex;
     border-radius: 16px;
-    width: 410px;
-    height: 74vh;
+    width: 540px;
+    height: 76vh;
     text-shadow: 0px 0px 14px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
@@ -79,7 +78,6 @@
     flex-direction: column;
     z-index: 1;
     padding: 24px;
-    color: black;
 }
 
 .lucide-icon {
@@ -193,6 +191,12 @@
 
 
 
+
+@media screen and (max-width: 908px) {
+    .card-content {
+        padding: 16px;
+    }
+}
 
 
 
