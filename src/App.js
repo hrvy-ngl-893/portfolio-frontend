@@ -14,6 +14,7 @@ import Experience from './Experience/Experience.js'
 import Resources from './Resources/Resources.js'
 
 import useIsMobile from './hooks/useIsMobile';
+import TopBarLinks from './Navigation/TopBarLinks.js';
 
 function App() {
     const isMobile = useIsMobile();
@@ -39,7 +40,6 @@ function App() {
             
             <Sidebar theme={theme} />}
             {isMobile ? <> </> : <Toggle theme={theme} setTheme={setTheme} />}
-            
         </BrowserRouter>
 
     );

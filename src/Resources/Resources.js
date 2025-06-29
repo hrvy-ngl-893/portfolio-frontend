@@ -1,11 +1,16 @@
 import LiquidGlass from "liquid-glass-react";
 
 import './Resources.css'
+import TopBarLinks from '../Navigation/TopBarLinks'
+import { useState } from "react";
+import PDFViewer from '../Components/PDFViewer.js'
 
 function Resources({theme}) {
+    const [selectedFile, setSelectedFile] = useState(null)
     return (
         <>
             <div className="resources-container">
+                <a href="/pdf/Identifying Express Stops for Manila LRT-Line 2.pdf" target='_blank'>Sooo</a>
             </div>
             <LiquidGlass
                 style={{
@@ -32,6 +37,10 @@ function Resources({theme}) {
                 className='header-title'>
                 <h1 style={{ color: `${theme === 'light' ? 'black' : 'white'}`, textAlign: 'left', fontSize: '24px', margin: '4px 8px' }}>Resources</h1>
             </LiquidGlass>
+                
+                {/* <PDFViewer file={selectedFile}/> */}
+
+            <TopBarLinks theme={theme}/>
         </>
     );
 }

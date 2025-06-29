@@ -5,10 +5,10 @@ import MainMediumTile from './MainMediumTile';
 import MainSmallTile from './MainSmallTile';
 import LiquidGlass from 'liquid-glass-react';
 import { Book, Globe, BookUser, Pen, Camera, Mail, PianoIcon, Laptop, BookMarked } from 'lucide-react';
+import TopBarLinks from '../Navigation/TopBarLinks';
 function Main({theme}) {
     return (
         <>
-        
             <div className='main-container'>
                 <div className="main-tile-container">
                     <div className="tile large" >
@@ -43,9 +43,9 @@ function Main({theme}) {
                     <MainSmallTile
                         title="Scholar"
                         content="Involved in research, hackathons, and a DOST scholar."
-                        image="/images/arlegui.jpeg"
-                        gradient1="rgba(130, 119, 108, 1) 70%"
-                        gradient2="rgba(105, 94, 83,1) 100%"
+                        image="/images/slc.jpeg"
+                        gradient1="rgb(224, 211, 136) 70%"
+                        gradient2="rgb(122, 102, 47) 100%"
                         lucide={[BookMarked, Laptop]}
                         color='white'
                     />
@@ -84,16 +84,17 @@ function Main({theme}) {
                     }}
 
                     elasticity={0.5}
-                    displacementScale={30}
+                    displacementScale={20}
                     blurAmount={0.05}
                     saturation={140}
                     aberrationIntensity={4}
-                    cornerRadius={60}
+                    cornerRadius={30}
                     padding="8px"
 
                     className='header-title'>
                     <h1 style={{ color: `${theme === 'light' ? 'black' : 'white'}`, textAlign: 'left', fontSize: '24px', margin: '4px 8px' }}>Home</h1>
                 </LiquidGlass>
+                <TopBarLinks theme={theme}/>
         </>
     );
 }

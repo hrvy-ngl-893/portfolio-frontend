@@ -5,7 +5,7 @@ import { Tooltip } from 'react-tippy';
 
 import './Sidebar.css';
 
-import { House, Briefcase, FileStack, Newspaper, SquareMenu } from 'lucide-react';
+import { House, Briefcase, FileStack, SquareMenu } from 'lucide-react';
 
 const navItems = [
     { path: '/', icon: <House size={36} />, label: 'Home' },
@@ -14,7 +14,7 @@ const navItems = [
     { path: '/resources', icon: <SquareMenu size={36} />, label: 'Resources' },
 ];
 
-function Sidebar({theme}) {
+function Sidebar({ theme }) {
     const [isExpanded, setIsExpanded] = useState(true);
     const [showLabel, setShowLabel] = useState(true);
     const [isHover, setIsHover] = useState(false);
@@ -37,7 +37,9 @@ function Sidebar({theme}) {
     return (
         <div className='two-container'
             onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}>
+            onMouseLeave={handleMouseLeave}
+            style={{ cursor: 'pointer' }}
+        >
             <LiquidGlass
                 style={{
                     position: 'fixed',

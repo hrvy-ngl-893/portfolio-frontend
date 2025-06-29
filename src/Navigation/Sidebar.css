@@ -47,6 +47,11 @@
     backdrop-filter: saturate(180%) blur(10px);
 }
 
+.sidebar-glass {
+    will-change: transform;
+    contain: layout paint style;
+}
+
 .sidebar-glass:hover {
     scale: 1.2;
 }
@@ -59,8 +64,6 @@
     background-color: var(--actv-hvr);
     transition: all 0.2 ease;
 }
-
-
 
 .nav-item.active .icon {
     background-color: var(--actv-hvr);

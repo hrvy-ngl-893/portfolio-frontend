@@ -1,4 +1,4 @@
-import { BookMarked, Code, Laptop, Scale, School } from 'lucide-react';
+import { Code, Laptop, Scale, School } from 'lucide-react';
 import './Experience.css'
 import './ExperienceCardContent.css'
 import React, { useRef, useEffect, useState, useMemo } from 'react';
@@ -88,7 +88,6 @@ const cards = [
     },
 ];
 
-
 function Experience({ theme }) {
     const [sortOption, setSortOption] = useState('id');
     const [tagFilters, setTagFilters] = useState([]);
@@ -136,7 +135,7 @@ function Experience({ theme }) {
                     }}
 
                     elasticity={0.5}
-                    displacementScale={30}
+                    displacementScale={0}
                     blurAmount={0.05}
                     saturation={140}
                     aberrationIntensity={4}

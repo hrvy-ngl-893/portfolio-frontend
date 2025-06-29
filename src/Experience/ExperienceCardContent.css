@@ -20,14 +20,7 @@
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     gap: 2rem;
-}
-
-.exp-card-container>div:first-child {
-    padding-left: 70vh;
-}
-
-.exp-card-container>div:last-child {
-    padding-right: 70vh;
+    scroll-snap-align: center;
 }
 
 .exp-card {
@@ -46,11 +39,13 @@
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
+    will-change: transform;
+    contain: layout paint style;
 }
 
 .exp-card>div {
     scroll-snap-align: center;
-    flex: 1;
+    flex: 1 1 auto;
 }
 
 
@@ -67,6 +62,12 @@
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 30px;
+}
+
+.card-link a:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
 }
 
 .card-spacer {
@@ -197,15 +198,6 @@
         padding: 16px;
     }
 }
-
-
-
-
-
-
-
-
-
 
 .card-overlay {
     position: absolute;

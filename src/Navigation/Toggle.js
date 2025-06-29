@@ -13,7 +13,7 @@ function Toggle({ theme, setTheme }) {
     };
 
     return (
-        <div onClick={toggleTheme} >
+        <div onClick={toggleTheme} style={{ cursor: 'pointer' }}>
             <LiquidGlass
                 style={{
                     position: 'fixed',
@@ -36,8 +36,8 @@ function Toggle({ theme, setTheme }) {
                 className={`toggle-glass`}>
 
                 {theme === 'dark'
-                    ? <Moon style={{ color: `${theme === 'light' ? 'black' : 'white'}`, cursor: 'pointer' }} />
-                    : <Sun style={{ color: `${theme === 'light' ? 'black' : 'white'}`, cursor: 'pointer' }} />}
+                    ? <Moon style={{ color: `${theme === 'light' ? 'black' : 'white'}` }} />
+                    : <Sun style={{ color: `${theme === 'light' ? 'black' : 'white'}` }} />}
             </LiquidGlass>
         </div>
     );

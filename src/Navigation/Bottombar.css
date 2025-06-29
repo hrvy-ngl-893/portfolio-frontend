@@ -9,6 +9,8 @@
     margin-left: 0px;
     vertical-align: middle;
     transition: transform 0.2s ease;
+        will-change: transform;
+    contain: layout paint style;
 }
 
 .bottom-bar:hover {

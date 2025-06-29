@@ -37,7 +37,6 @@ const TagIcons = {
 
 };
 
-
 const SkillIcons = {
     Programming: Code2,           // 🖥️ Represents coding
     Research: Microscope,        // 🔬 Obvious symbol for research
@@ -53,8 +52,9 @@ const SkillIcons = {
 
 
 function ExperienceCard({ title, content, date, image, gradient1, gradient2, icon = [], lucide = [], tags = [], skills = [], color, isActive, theme, link }) {
+    
+    
     return (
-
         <div className="exp-card">
             <div className="card-overlay"
                 style={{
@@ -70,7 +70,7 @@ function ExperienceCard({ title, content, date, image, gradient1, gradient2, ico
                         <div className='link-spacer' />
 
 
-                        <a href={link}>View</a>
+                        <a href={link} target='_blank'>View</a>
 
                     </div>)}
                 <div className='card-spacer' />

@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import './Projects.css';
-
+import './ProjectCard.css';
+import GithubButton from '../Components/GithubButton.js'
 import {
     GraduationCap,
     Briefcase,
@@ -36,7 +37,6 @@ const TagIcons = {
 
 };
 
-
 const SkillIcons = {
     Programming: Code2,           // 🖥️ Represents coding
     Research: Microscope,        // 🔬 Obvious symbol for research
@@ -50,10 +50,9 @@ const SkillIcons = {
     Academics: BookPlus,         // 📖 For study/learning
 };
 
-function ProjectCard({ title, content, date, image, gradient1, gradient2, icon = [], lucide = [], tags = [], skills = [], color, isActive, theme, link }) {
+function ProjectCard({ title, content, date, image, gradient1, gradient2, icon = [], lucide = [], tags = [], skills = [], color, theme, links = [] }) {
     return (
-
-        <div className="exp-card">
+        <div className="prj-card">
             <div className="card-overlay"
                 style={{
                     background: `linear-gradient(to bottom,  ${gradient1}, ${gradient2}`
@@ -62,20 +61,28 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
                 style={{ backgroundImage: `url(${image})` }}
             />
             <div className="card-content" style={{ color: color }}>
-                {link && (
-                    <div className='card-link'>
+                {links.length > 0 && (
+                    <div className="card-links">
+                        <div className="link-spacer" />
 
-                        <div className='link-spacer' />
-                        <a href={link}>View</a>
-
-                    </div>)}
+                        {links.map((link, index) => {
+                            if (link.type === 'Github') {
+                                return <GithubButton key={index} link={link.url} theme={theme} />;
+                            }
+                            // } else if (link.type === 'Figma') {
+                            //     return <FigmaButton key={index} link={link.url} theme={theme} />;
+                            // }
+                            return null; // fallback for unsupported types
+                        })}
+                    </div>
+                )}
                 <div className='card-spacer' />
                 <div className="card-icons">
                     {icon.map((i, index) => (
                         <i
                             key={index}
                             className={`devicon-${i}-plain`}
-                            style={{ marginRight: '8px' }}
+                            style={{ marginRight: '8px', fontSize: '32px' }}
                         />
                     ))}
 
@@ -84,7 +91,7 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
                     ))}
                 </div>
                 <h1 className='card-h1'>{title}</h1>
-                <span className='cart-subtitle'>TOOLS USED</span>
+                <span className='cart-subtitle'>DATE</span>
                 <div className="card-tags">
                     <span className='tag date'>{date}</span>
                     {tags.map((t, index) => {

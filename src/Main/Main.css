@@ -3,28 +3,19 @@
     align-items: center;
     z-index: 0;
     width: 100%;
-
-
-
-    /* background-image:
-        radial-gradient(at 93% 88%, hsla(210, 67%, 80%, 0.1) 0px, transparent 50%),
-        radial-gradient(at 80% 0%, hsla(193, 73%, 76%, 0.1) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, hsla(258, 83%, 90%, 0.1) 0px, transparent 50%),
-        radial-gradient(at 63% 34%, hsla(217, 80%, 86%, 0.1) 0px, transparent 50%),
-        radial-gradient(at 38% 69%, hsla(178, 88%, 89%, 0.1) 0px, transparent 50%),
-        radial-gradient(at 0% 0%, hsla(139, 81%, 85%, 0.1) 0px, transparent 50%); */
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
-
     overflow-y: auto;
     height: 100vh;
     position: absolute;
+    transition: transform 0.2s ease-in;
+    will-change: transform;
+    contain: layout paint style;
 }
 
-
 .main-tile-container {
-    padding: 12vh 8vh 8vh 8vh;
+    padding: 12vh 6vh 6vh 6vh;
 
     height: 130vh;
     display: grid;
@@ -54,6 +45,8 @@
     width: 100%;
     transition: all 0.2s ease;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    will-change: transform;
+    contain: layout paint style;
 }
 
 .tile-overlay {
@@ -93,8 +86,7 @@
     margin-right: 8px;
 }
 
-
-[class^=devicon-], [class*=" devicon-"] {
+.tile [class^=devicon-], [class*=" devicon-"] {
     font-size: 32px !important;
 }
 
@@ -106,16 +98,12 @@
 .tile-p {
     margin: 0;
     font-size: 18px;
-    
 }
 
-a {
-    text-decoration: none !important;
-}
 .tile:hover {
-    scale: 1.01;
+    transform: scale(1.01);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
-    transition: all 0.4s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .tile:nth-child(1) {
@@ -137,7 +125,7 @@ a {
     .main-tile-container {
         display: block;
         padding: 12vh 4vh 4vh 4vh;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
         height: 270vh;
     }
 

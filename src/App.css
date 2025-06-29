@@ -2,9 +2,9 @@
     --bg-color: rgba(227, 240, 240, 1);
     --bg-gradient: linear-gradient(
         to bottom,
-        #83c8d8 0%,
-        #868686 50%,
-        #737373 100%
+        #ddf4ff 0%,
+        #d8e3e5 50%,
+        #ececec 100%
     );
 }
 
@@ -12,19 +12,26 @@
     --bg-color: #121212;
     --bg-gradient: linear-gradient(
         to bottom,
-        #1397b4 0%,
-        #121212 50%,
+        #001519 0%,
+        #040909 50%,
         #0e0e0e 100%
     );
 }
 
+html {
+    background-color: var(--bg-color);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    transition: all 1s ease;
+}
 body {
     background-image: var(--bg-gradient);
-    background-color: var(--bg-color);
+    background-size: cover !important;
+    background-position: center center !important;
     background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.3s ease, color 0.3s ease;
+    transition: all 1s ease, color 1s ease;
+    overscroll-behavior-y:none;
+    -webkit-overflow-scrolling: auto;
 }
 
 .bottom-bar {

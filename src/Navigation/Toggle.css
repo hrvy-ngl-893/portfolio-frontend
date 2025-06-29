@@ -1,3 +1,7 @@
+.toggle-glass {
+    will-change: transform;
+    contain: layout paint style;
+}
 .toggle-glass:hover{
     scale: 1.2;
     transition: all 0.4s ease;
