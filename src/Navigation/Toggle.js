@@ -20,7 +20,7 @@ function Toggle({ theme, setTheme }) {
                     top: 'calc(100% - 50px)',
                     left: '50px',
                     zIndex: 10,
-                    background: 'rgba(0,0,0,0.03)',
+                    backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'}`,
                     transform: 'translate(-50%, -50%)',
                     borderRadius: '32px',
                 }}

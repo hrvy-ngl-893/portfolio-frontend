@@ -3,6 +3,9 @@
     align-items: center;
     z-index: 0;
     width: 100%;
+
+
+
     /* background-image:
         radial-gradient(at 93% 88%, hsla(210, 67%, 80%, 0.1) 0px, transparent 50%),
         radial-gradient(at 80% 0%, hsla(193, 73%, 76%, 0.1) 0px, transparent 50%),
@@ -21,7 +24,7 @@
 
 
 .main-tile-container {
-    padding: 8vh;
+    padding: 12vh 8vh 8vh 8vh;
 
     height: 130vh;
     display: grid;
@@ -133,7 +136,7 @@ a {
 @media screen and (max-width: 908px) {
     .main-tile-container {
         display: block;
-        padding: 4vh;
+        padding: 12vh 4vh 4vh 4vh;
         transition: all 0.3s ease;
         height: 270vh;
     }

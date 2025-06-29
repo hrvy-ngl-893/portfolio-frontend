@@ -1,5 +1,7 @@
 .projects-container {
     height: 100vh;
+        display: flex;
+    flex-flow: column;
     overflow-y: auto;
     background-size: cover !important;
     background-position: center center !important;
@@ -10,5 +12,18 @@
     align-items: center;
     z-index: 0;
     overflow: hidden;
-    
+}
+
+.projects-card-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 2rem;
 }

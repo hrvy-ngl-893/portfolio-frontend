@@ -8,13 +8,13 @@ import './Sidebar.css';
 import { House, Briefcase, FileStack, Newspaper, SquareMenu } from 'lucide-react';
 
 const navItems = [
-    { path: '/', icon: <House size={36} />, label: 'Harvy Angelo D. Tan' },
+    { path: '/', icon: <House size={36} />, label: 'Home' },
     { path: '/projects', icon: <Briefcase size={36} />, label: 'Projects' },
     { path: '/experience', icon: <FileStack size={36} />, label: 'Experience' },
     { path: '/resources', icon: <SquareMenu size={36} />, label: 'Resources' },
 ];
 
-function Sidebar() {
+function Sidebar({theme}) {
     const [isExpanded, setIsExpanded] = useState(true);
     const [showLabel, setShowLabel] = useState(true);
     const [isHover, setIsHover] = useState(false);
@@ -45,7 +45,7 @@ function Sidebar() {
                     left: '50px',
                     transform: 'translate(-50%, -50%)',
                     zIndex: 10,
-                    background: 'rgba(0,0,0,0.08)',
+                    backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.0)'}`,
                     borderRadius: '32px',
                 }}
 

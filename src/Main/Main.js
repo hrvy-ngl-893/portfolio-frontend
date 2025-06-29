@@ -3,17 +3,19 @@ import './Main.css';
 import React, { useMemo } from 'react';
 import MainMediumTile from './MainMediumTile';
 import MainSmallTile from './MainSmallTile';
-import { Book, Globe, BookUser, Paintbrush, Pen, Camera, Mail, Piano, PianoIcon, Computer, Laptop, BookMarked } from 'lucide-react';
-function Main() {
+import LiquidGlass from 'liquid-glass-react';
+import { Book, Globe, BookUser, Pen, Camera, Mail, PianoIcon, Laptop, BookMarked } from 'lucide-react';
+function Main({theme}) {
     return (
         <>
+        
             <div className='main-container'>
                 <div className="main-tile-container">
                     <div className="tile large" >
                         <div className="tile-overlay"
                             style={{
                                 background: `linear-gradient(to bottom,rgb(93, 35, 35) 60%,rgb(43, 23, 23) 100%)`
-                            }} 
+                            }}
                         />
                         <div
                             className="tile-image-mask"
@@ -35,7 +37,7 @@ function Main() {
                         image="/images/code.jpeg"
                         gradient1="#23395d 70%"
                         gradient2="#17202b 100%"
-                        icon={['swift', 'python', 'javascript']}
+                        icon={['swift', 'python', 'javascript', 'amazonwebservices']}
                         color='white'
                     />
                     <MainSmallTile
@@ -59,7 +61,7 @@ function Main() {
                     />
                     <MainMediumTile
                         title="Contact Me!"
-                        content={<a href='mailto:harvyangelo.tan@gmail.com' style={{ color: 'white' }}><Mail style={{width: '20px', height: '15px', justifyContent: 'center', marginRight: '4px'}}></Mail>harvyangelo.tan@gmail.com</a>}
+                        content={<a href='mailto:harvyangelo.tan@gmail.com' style={{ color: 'white' }}><Mail style={{ width: '20px', height: '15px', justifyContent: 'center', marginRight: '4px' }}></Mail>harvyangelo.tan@gmail.com</a>}
                         image="/images/unmei.jpg"
                         gradient1="rgba(142, 237, 140, 1) 0%"
                         gradient2="rgba(118, 156, 117, 1) 100%"
@@ -67,6 +69,31 @@ function Main() {
                         color='white' />
                 </div>
             </div>
+            <LiquidGlass
+                    style={{
+                        top: '6%',
+                        left: '70px',
+                        position: 'fixed',
+                        display: 'inline',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        zIndex: 100,
+                        backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'}`,
+                        borderRadius: '60px',
+
+                    }}
+
+                    elasticity={0.5}
+                    displacementScale={30}
+                    blurAmount={0.05}
+                    saturation={140}
+                    aberrationIntensity={4}
+                    cornerRadius={60}
+                    padding="8px"
+
+                    className='header-title'>
+                    <h1 style={{ color: `${theme === 'light' ? 'black' : 'white'}`, textAlign: 'left', fontSize: '24px', margin: '4px 8px' }}>Home</h1>
+                </LiquidGlass>
         </>
     );
 }

@@ -1,27 +1,38 @@
-
 import LiquidGlass from "liquid-glass-react";
 
 import './Resources.css'
-function Resources() {
+
+function Resources({theme}) {
     return (
-    <div className="resources-container">
-                <LiquidGlass
-                    className="resource-glass"
-                    displacementScale={-30}
-                    blurAmount={0.2}
-                    saturation={140}
-                    aberrationIntensity={5}
-                    elasticity={0.4}
-                    cornerRadius={32}
-                    mode="standard"
-                    overLight={false}
-                >
-        <span>
-            Resources
-        </span>
-</LiquidGlass>
-        <h1>Kono kuni</h1>
-    </div>
+        <>
+            <div className="resources-container">
+            </div>
+            <LiquidGlass
+                style={{
+                    top: '6%',
+                    left: '95px',
+                    position: 'fixed',
+                    display: 'inline',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    zIndex: 10,
+                    backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'}`,
+                    borderRadius: '60px',
+
+                }}
+
+                elasticity={0.5}
+                displacementScale={30}
+                blurAmount={0.05}
+                saturation={140}
+                aberrationIntensity={4}
+                cornerRadius={60}
+                padding="8px"
+
+                className='header-title'>
+                <h1 style={{ color: `${theme === 'light' ? 'black' : 'white'}`, textAlign: 'left', fontSize: '24px', margin: '4px 8px' }}>Resources</h1>
+            </LiquidGlass>
+        </>
     );
 }
 export default Resources;

@@ -12,7 +12,7 @@ const navItems = [
     { path: '/resources', icon: <SquareMenu size={24} />, label: 'Resources' },
 ];
 
-function Bottombar() {
+function Bottombar({theme}) {
 
     return (
         <div className='bottom-bar-container'>
@@ -27,7 +27,7 @@ function Bottombar() {
                     flexDirection: 'row',
                     justifyContent: 'center',
                     zIndex: 10,
-                    background: 'rgba(0,0,0,0.03)',
+                    backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'}`,
                     borderRadius: '60px',
                     width: '206px'
                     // boxShadow: '0px 0px 0px rgba(0,0,0,0.1)'

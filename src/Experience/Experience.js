@@ -4,7 +4,7 @@ import './ExperienceCardContent.css'
 import React, { useRef, useEffect, useState, useMemo } from 'react';
 import ExperienceCard from './ExperienceCard';
 import ExperienceFilter from './ExperienceFilter';
-
+import LiquidGlass from 'liquid-glass-react';
 
 const cards = [
     {
@@ -89,7 +89,7 @@ const cards = [
 ];
 
 
-function Experience({theme}) {
+function Experience({ theme }) {
     const [sortOption, setSortOption] = useState('id');
     const [tagFilters, setTagFilters] = useState([]);
 
@@ -121,13 +121,36 @@ function Experience({theme}) {
     return (
         <div class="exp-container">
             <div className='exp-toolbar'>
-            {cards.map((card, index) => (
-                <a key={card.id} href={`#${card.id}`}>{index + 1}</a>
-            ))}
+                <LiquidGlass
+                    style={{
+                        top: '6%',
+                        left: '100px',
+                        position: 'fixed',
+                        display: 'inline',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        zIndex: 10,
+                        backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'}`,
+                        borderRadius: '60px',
+
+                    }}
+
+                    elasticity={0.5}
+                    displacementScale={30}
+                    blurAmount={0.05}
+                    saturation={140}
+                    aberrationIntensity={4}
+                    cornerRadius={60}
+                    padding="8px"
+
+                    className='header-title'>
+                    <h1 style={{ color: `${theme === 'light' ? 'black' : 'white'}`, textAlign: 'left', fontSize: '24px', margin: '4px 8px' }}>Experience</h1>
+                </LiquidGlass>
             </div>
-            
+
             <div className='exp-card-container'>
-            {filteredAndSortedCards.map((card) => (
+
+                {filteredAndSortedCards.map((card) => (
                     <div key={card.id} id={card.id}>
                         <ExperienceCard
                             title={card.title}
@@ -142,18 +165,18 @@ function Experience({theme}) {
                             tags={card.tags}
                             color={card.color}
                             theme={theme}
-                            link={card.link} 
+                            link={card.link}
                         />
                     </div>
                 ))}
             </div>
             <ExperienceFilter
-            sortOption={sortOption}
+                sortOption={sortOption}
                 setSortOption={setSortOption}
                 tagFilters={tagFilters}
                 setTagFilters={setTagFilters}
                 theme={theme}
-                />
+            />
         </div>
 
     );

@@ -29,15 +29,15 @@ function App() {
         <BrowserRouter>
             <div className="app">
                 <Routes>
-                    <Route path='/' element={<Main />} />
-                    <Route path='/projects' element={<Projects />} />
+                    <Route path='/' element={<Main theme={theme} />} />
+                    <Route path='/projects' element={<Projects theme={theme}  />} />
                     <Route path='/experience' element={<Experience theme={theme} />} />
-                    <Route path='/resources' element={<Resources />} />
+                    <Route path='/resources' element={<Resources theme={theme}  />} />
                 </Routes>
             </div>
-            {isMobile ? <> <Bottombar /><BottomToggle theme={theme} setTheme={setTheme} /> </> :
+            {isMobile ? <> <Bottombar theme={theme} /><BottomToggle theme={theme} setTheme={setTheme} /> </> :
             
-            <Sidebar />}
+            <Sidebar theme={theme} />}
             {isMobile ? <> </> : <Toggle theme={theme} setTheme={setTheme} />}
             
         </BrowserRouter>
