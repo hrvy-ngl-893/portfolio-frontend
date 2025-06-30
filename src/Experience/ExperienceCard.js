@@ -39,16 +39,16 @@ const TagIcons = {
 };
 
 const SkillIcons = {
-    Programming: Code2,           // 🖥️ Represents coding
-    Research: Microscope,        // 🔬 Obvious symbol for research
-    Interpersonal: MessageCircle, // 💬 Communication symbol
-    Speaking: Mic,         // 🎤 Microphone
-    Music: Music,                // 🎵 Music note
-    Art: Brush,                  // 🖌️ For visual art
-    Writing: Pencil,             // ✏️ Pencil for writing
-    Photography: Camera,         // 📷 Obvious
-    Design: Palette,             // 🎨 Color palette
-    Academics: BookPlus,         // 📖 For study/learning
+    Programming: Code2,           
+    Research: Microscope,        
+    Interpersonal: MessageCircle, 
+    Speaking: Mic,        
+    Music: Music,               
+    Art: Brush,                 
+    Writing: Pencil,            
+    Photography: Camera,        
+    Design: Palette,            
+    Academics: BookPlus,        
 };
 
 
