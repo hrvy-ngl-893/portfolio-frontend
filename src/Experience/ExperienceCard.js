@@ -1,7 +1,7 @@
 import './Experience.css';
 import './ExperienceCardContent.css';
 import React, { useMemo, useState, useEffect } from 'react';
-import LiquidGlass from 'liquid-glass-react';
+import ViewButton from '../Components/ViewButton';
 
 import {
     GraduationCap,
@@ -23,6 +23,7 @@ import {
     Camera,
     Palette,
     BookPlus,
+    Eye
 } from 'lucide-react';
 
 const TagIcons = {
@@ -70,7 +71,8 @@ function ExperienceCard({ title, content, date, image, gradient1, gradient2, ico
                         <div className='link-spacer' />
 
 
-                        <a href={link} target='_blank'>View</a>
+                        <a href={link} target='_blank'><Eye style={{width:'16px',verticalAlign: 'middle',
+                            marginRight: '4px',}}/>View</a>
 
                     </div>)}
                 <div className='card-spacer' />

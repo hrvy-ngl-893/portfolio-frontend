@@ -1,14 +1,14 @@
 
 import './Components.css'
-import { SiGithub } from "@icons-pack/react-simple-icons";
-function GithubButton({ link, of, theme }) {
+import { Eye } from 'lucide-react';
+function ViewButton({ link, of, theme }) {
     return (
         <>
             <div className="custom-button"
                 style={{
                     alignItems: 'middle',
                     padding: '8px 12px',
-                    backgroundColor: 'rgba(0,0,0,0.8)',
+                    backgroundColor: 'rgba(0, 136, 255, 0.8)',
                     textDecoration: 'none',
                     borderRadius: '32px',
                     color:'white !important',
@@ -16,7 +16,7 @@ function GithubButton({ link, of, theme }) {
                 }}
             >
                 <a href={link} target="_blank" style={{color: 'white'}}>
-                    <SiGithub
+                    <Eye
                         style={{
                             width: '16px',
                             alignContent: 'center',
@@ -27,8 +27,8 @@ function GithubButton({ link, of, theme }) {
                         className='button-icon'
                     />
                     <div className='stacked-btn-text'>
-                    <span style={{verticalAlign: 'center',textDecoration: 'none',textAlign:'center',}} className='button-title'>Github</span>
-                    <span style={{verticalAlign: 'center',textDecoration: 'none',textAlign:'center',}} className='button-subtitle'>{of.toUpperCase()}</span>
+                    <span style={{verticalAlign: 'center',textDecoration: 'none',textAlign:'center',}} className='button-title'>View</span>
+                    <span style={{verticalAlign: 'center',textDecoration: 'none',}} className='button-subtitle'>{of.toUpperCase()}</span>
                     </div>
                 </a>
             </div>
@@ -36,4 +36,4 @@ function GithubButton({ link, of, theme }) {
     );
 };
 
-export default GithubButton;
+export default ViewButton;

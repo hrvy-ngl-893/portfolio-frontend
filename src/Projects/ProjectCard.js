@@ -3,6 +3,7 @@ import { useState } from "react";
 import './Projects.css';
 import './ProjectCard.css';
 import GithubButton from '../Components/GithubButton.js'
+import ViewButton from '../Components/ViewButton.js'
 import {
     GraduationCap,
     Briefcase,
@@ -57,9 +58,11 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
                 style={{
                     background: `linear-gradient(to bottom,  ${gradient1}, ${gradient2}`
                 }} />
+            
             <div className="card-image-mask"
                 style={{ backgroundImage: `url(${image})` }}
             />
+            <div className="card-overlay2" />
             <div className="card-content" style={{ color: color }}>
                 {links.length > 0 && (
                     <div className="card-links">
@@ -67,12 +70,14 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
 
                         {links.map((link, index) => {
                             if (link.type === 'Github') {
-                                return <GithubButton key={index} link={link.url} theme={theme} />;
+                                return <GithubButton key={index} link={link.url} of={link.of} theme={theme} />;
+                            } else if (link.type === 'View') {
+                                return <ViewButton key={index} link={link.url} of={link.of} theme={theme} />;
                             }
                             // } else if (link.type === 'Figma') {
                             //     return <FigmaButton key={index} link={link.url} theme={theme} />;
                             // }
-                            return null; // fallback for unsupported types
+                            return null; 
                         })}
                     </div>
                 )}
@@ -116,7 +121,7 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
                         );
                     })}
                 </div>
-                <p className='card-p'>{content}</p>
+                <p className='card-p' dangerouslySetInnerHTML={{ __html: content }}/>
             </div>
         </div>
 

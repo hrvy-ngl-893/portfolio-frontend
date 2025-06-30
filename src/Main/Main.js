@@ -37,7 +37,7 @@ function Main({theme}) {
                         image="/images/code.jpeg"
                         gradient1="#23395d 70%"
                         gradient2="#17202b 100%"
-                        icon={['swift', 'python', 'javascript', 'amazonwebservices']}
+                        icon={['swift', 'python', 'javascript', 'amazonwebservices', 'arduino', 'docker']}
                         color='white'
                     />
                     <MainSmallTile

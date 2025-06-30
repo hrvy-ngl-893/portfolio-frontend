@@ -8,57 +8,128 @@ import ProjectCard from './ProjectCard.js';
 import { SiJavascript } from '@icons-pack/react-simple-icons';
 const projectsSoftware = [
     {
-        id: 'prj-1',
+        id: 'prj-s1',
         title: 'Hanapp',
         date: 2023,
         content: 'Primitive room scheduling system for automating room request and approval. Submitted for Database Management course.',
         image: '/images/sunset.jpeg',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
-        icon: ['javascript'],
+        icon: [ 'mysql', 'javascript', 'vuejs'],
+        tags: ["Education"],
         skills: ["Programming", "Academics"],
         color: 'white',
         links: [
-            {type: 'Github', url: 'https://github.com/hrvy-ngl-893/hanappv1'},
+            {type: 'Github', url: 'https://github.com/hrvy-ngl-893/hanappv1', of: 'Backend'},
         ]
     },
     {
-        id: 'prj-2',
+        id: 'prj-s2',
         title: 'Hanapp V2',
         date: 2024,
         content: 'Complete room scheduling system for automating room request and approval. Submitted for Software Design course.',
         image: '/images/inari.JPG',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
-        lucide: [Laptop, Code],
-        skills: ["Programming", "Speaking"],
+        icon: ['mysql', 'javascript', 'react', 'docker'],
+        tags: ["Education"],
+        skills: ["Programming", "Academics"],
         color: 'white',
+        links: [
+            {type: 'Github', url: 'https://github.com/hrvy-ngl-893/hanapp_v2', of: 'Backend'},
+            {type: 'Github', url: 'https://github.com/hekseydis/hanappv2-website', of: 'Frontend'},
+        ]
     },
     {
-        id: 'prj-3',
-        title: 'thre',
-        date: 2021,
-        content: 'Hands-on in robotics, embedded systems, and innovation.',
+        id: 'prj-s3',
+        title: 'LRY Marketing Dashboard',
+        date: 2024,
+        content: 'Full-stack software solution optimized for SEO business management and content tracking for an Australia-based company.',
         image: '/images/inari.JPG',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
-        lucide: [Laptop, Code],
-        tags: ["Certification"],
-        skills: ["Photography", "Speaking"],
+        icon: [ 'mysql', 'javascript', 'react', 'nextjs', 'docker'],
+        tags: ['Job'],
+        skills: ["Programming"],
         color: 'white',
+        links: [
+            {type: 'View', url: 'https://hub.lrymarketing.com.au', of: 'Website'}
+        ]
+    },
+    {
+        id: 'prj-s4',
+        title: 'SolAR',
+        date: 2025,
+        content: 'Augmented Reality app that immerses users in a simulation of a solar panel installation based on their set parameters. Won <b>third place</b> in the inaugural C2 Design Challenge competition of T.I.P. TechnoCoRe.',
+        image: '/images/sunset.jpeg',
+        gradient1: 'rgba(50, 50, 50, 1) 70%',
+        gradient2: 'rgba(10, 10, 10, 1) 100%',
+        icon: [ 'swift', 'kotlin'],
+        tags: ['Competition'],
+        skills: ["Programming", "Speaking"],
+        color: 'white',
+        links: [
+            {type: 'Github', url: 'https://github.com/hrvy-ngl-893/solAR', of: 'Swift'},
+            {type: 'Github', url: 'https://github.com/jmsabt/arTesting.git', of: 'Kotlin'},
+        ]
+    },
+        {
+        id: 'prj-s5',
+        title: 'RiceFlow',
+        date: 2025,
+        content: '.',
+        image: '/images/sunset.jpeg',
+        gradient1: 'rgba(50, 50, 50, 1) 70%',
+        gradient2: 'rgba(10, 10, 10, 1) 100%',
+        icon: [ 'swift'],
+        tags: ['Competition'],
+        skills: ["Programming", "Speaking"],
+        color: 'white',
+        links: [
+        ]
+    },
+    {
+        id: 'prj-s6',
+        title: 'Spatial Capsule',
+        date: 2025,
+        content: '.',
+        image: '/images/sunset.jpeg',
+        gradient1: 'rgba(50, 50, 50, 1) 70%',
+        gradient2: 'rgba(10, 10, 10, 1) 100%',
+        icon: [ 'swift'],
+        tags: ['Competition'],
+        skills: ["Programming"],
+        color: 'white',
+        links: [
+        ]
+    },
+    {
+        id: 'prj-s7',
+        title: 'Metro Mania',
+        date: 2025,
+        content: '.',
+        image: '/images/sunset.jpeg',
+        gradient1: 'rgba(50, 50, 50, 1) 70%',
+        gradient2: 'rgba(10, 10, 10, 1) 100%',
+        icon: [ 'swift'],
+        tags: ['Competition'],
+        skills: ["Programming"],
+        color: 'white',
+        links: [
+        ]
     },
 ]
 
 const projectsHardware = [    {
         id: 'prj-9',
-        title: 'thre',
-        date: 2021,
-        content: 'Hands-on in robotics, embedded systems, and innovation.',
+        title: 'Maze-solving Robot',
+        date: 2024,
+        content: 'Created a maze-solving robot using Arduino UNO with a suite of ultrasonic sensors in collaboration with Irish Roxas.',
         image: '/images/inari.JPG',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
-        lucide: [Laptop, Code],
-        tags: ["Certification"],
+        icon: ['arduino'],
+        tags: ["Education"],
         skills: ["Photography", "Speaking"],
         color: 'white',
     },]
@@ -180,7 +251,7 @@ function Projects({ theme }) {
                     </div>
 
                     <div>
-                        <h2 className='prj-h1' style={{ color: `${theme === 'light' ? 'black' : 'white'}` }}>Art</h2>
+                        <h2 className='prj-h1' style={{ color: `${theme === 'light' ? 'black' : 'white'}` }}>Design</h2>
                         <div className='projects-card-container'>
                             {projectsArt.map((card, id) => (
                                 <div key={card.id} id={card.id}>
