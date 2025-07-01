@@ -9,9 +9,9 @@ function Resources({theme}) {
     const [selectedFile, setSelectedFile] = useState(null)
     return (
         <>
-            <div className="resources-container">
+            {/* <div className="resources-container">
                 <a href="/pdf/Identifying Express Stops for Manila LRT-Line 2.pdf" target='_blank'>Sooo</a>
-            </div>
+            </div> */}
             <LiquidGlass
                 style={{
                     top: '6%',
