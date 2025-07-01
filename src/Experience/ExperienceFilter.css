@@ -1,23 +1,28 @@
 .filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     color: var(--clr);
+    padding-left: 0.5rem;
+    background-color: red;
+    width: fit-content;
     text-align: left;
-    padding-left: 4px;
-    vertical-align: middle; 
 }
 
+
 .filter-options label {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     margin: 0px;
 }
 
 .filter-options label select {
-    margin: 0px 20px 0px 20px;
+    margin: 0px 2.25rem 0px 2.25rem;
     padding: 4px 6px;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.5rem;
     background-color: transparent;
-color: var(--clr);
+    color: var(--clr);
     font-size: 14px;
 }
 
@@ -29,31 +34,35 @@ color: var(--clr);
     margin: 10px 0px 0px 0px;
 }
 
-.filter-tags-container  {
+.filter-tags-container {
     font-size: 14px;
 }
 
-.filter-tags-container span  {
+.filter-tags-container span {
     font-size: 16px;
     font-weight: bold;
     display: block;
     margin-bottom: 8px;
 }
 
-.filter-tags-container label  {
+.filter-tags-container label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 
     border: none;
     border-radius: 4px;
     background-color: transparent;
-color: var(--clr);
+    color: var(--clr);
     font-size: 14px;
-    gap: 0.5rem; 
     font-weight: normal;
-    vertical-align: middle;
     appearance: none;
 
-    align-items: center; /* This aligns the checkbox and text vertically */
-  gap: 0.5rem;
+    margin-bottom: 6px; /* optional spacing between items */
+
+    align-items: center;
+    /* This aligns the checkbox and text vertically */
+
 }
 
 .filter-tags-container input {
@@ -61,16 +70,31 @@ color: var(--clr);
 }
 
 .sort-label {
-    width: 206px;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+}
+
+.sort-label label {
+    margin: 0;
+    font-weight: bold;
+}
+
+.sort-label select {
+    padding: 4px 6px;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: var(--clr);
+    font-size: 14px;
 }
 
 .filter-icon {
-
     vertical-align: middle;
 
 }
+
 .filter-glass svg {
     color: var(--clr);
 }

@@ -15,29 +15,8 @@ const navItems = [
 ];
 
 function Sidebar({ theme }) {
-    const [isExpanded, setIsExpanded] = useState(true);
-    const [showLabel, setShowLabel] = useState(true);
-    const [isHover, setIsHover] = useState(false);
-
-    const handleMouseEnter = () => {
-        setIsHover(true);
-    };
-    const handleMouseLeave = () => {
-        setIsHover(false);
-    };
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsExpanded(false);
-        }, 1000);
-        console.log('set False');
-        return () => clearTimeout(timer);
-    }, []);
-
     return (
         <div className='two-container'
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
             style={{ cursor: 'pointer' }}
         >
             <LiquidGlass
@@ -70,6 +49,7 @@ function Sidebar({ theme }) {
                             className={({ isActive }) =>
                                 isActive ? "nav-item active" : "nav-item"
                             }
+                            style={{filter: `drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5))`}}
                         >
                             <Tooltip
                                 title={item.label}

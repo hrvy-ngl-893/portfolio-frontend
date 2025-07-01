@@ -8,20 +8,7 @@
     --card-text-dark: black;
 }
 
-.exp-card-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    padding-bottom: 20px;
-    justify-content: flex-start;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    gap: 2rem;
-    scroll-snap-align: center;
-}
+
 
 .exp-card {
     position: relative;
@@ -29,9 +16,8 @@
     align-items: stretch;
     display: flex;
     flex-direction: column;
-    justify-content: flex;
     border-radius: 16px;
-    width: 540px;
+    width: 40rem;
     height: 76vh;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
     transition: all 0.2s ease;
@@ -43,21 +29,17 @@
     contain: layout paint style;
 }
 
-.exp-card>div {
-    scroll-snap-align: center;
-    flex: 1 1 auto;
+.card-spacer {
+    flex-grow: 1;
 }
 
-.exp-card:hover .card-image-mask {
- -webkit-mask-image: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.9) 0%,
-            rgba(0, 0, 0, 0.4) 50%,
-            rgba(0, 0, 0, 0) 80%);
-    mask-image: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.9) 0%,
-            rgba(0, 0, 0, 0.4) 50%,
-            rgba(0, 0, 0, 0) 80%);
-    transition: all 0.2s ease;
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 24px;
+    transition: all 0.4s ease;
 }
 
 .exp-card .card-link {
@@ -65,20 +47,18 @@
     align-items: flex-end;
     justify-content: flex-end;
 }
+
 .card-h1 {
     margin-top: 0;
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    transition: all 0.4s ease;
 }
 
 .card-p {
     margin: 0;
-  font-size: clamp(1rem, 7vw, 0.5rem); 
-  overflow-wrap: break-word;
-  overflow-y: auto;
-  max-height: 100%; 
+    font-size: clamp(0.3rem, 1vw + 0.5rem, 1rem); 
 }
-
 
 .exp-card .card-link a {
     display: flex;
@@ -87,6 +67,7 @@
     background-color: rgba(0, 136, 255, 0.8);
     text-decoration: none;
     color: white;
+    text-shadow: none;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 30px;
     vertical-align: middle;
@@ -96,19 +77,8 @@
 
 .exp-card .card-link a:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     transition: all 0.4s ease;
-}
-
-.exp-card .card-spacer {
-    flex-grow: 1;
-}
-
-.exp-card .card-content {
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-    padding: 24px;
 }
 
 .lucide-icon {
@@ -123,7 +93,7 @@
     flex-direction: row;
     margin-bottom: 12px;
     gap: 0.5rem;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
 }
 
 .tag {
@@ -142,7 +112,7 @@
 .exp-card .card-subtitle {
     font-size: 10px;
     font-weight: bold;
-    color: rgb(240,240,240);
+    color: rgb(240, 240, 240);
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
     margin: 0px 0px 4px 0px;
 }
@@ -224,6 +194,12 @@
 @media screen and (max-width: 908px) {
     .card-content {
         padding: 16px;
+        transition: all 0.4s ease;
+    }
+
+    .card-h1 {
+        font-size: 1.5rem;
+        transition: all 0.4s ease;
     }
 }
 
@@ -250,4 +226,22 @@
             rgba(0, 0, 0, 0) 80%);
     z-index: 0;
     border-radius: 16px;
+    transition: all 0.5s ease;
+}
+
+.exp-card>div {
+    scroll-snap-align: center;
+    flex: 1 1 auto;
+}
+
+.exp-card:hover .card-image-mask {
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0) 80%);
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0) 80%);
+    transition: all 0.2s ease;
 }

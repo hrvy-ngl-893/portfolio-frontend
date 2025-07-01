@@ -23,12 +23,12 @@
 }
 
 .projects-card-container {
-    padding: 1vh 120vh 1vh 12vh;
+    padding: 2vh 120vh 4vh 6rem;
     display: flex;
     overflow-x: auto;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 4vh;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
@@ -45,7 +45,7 @@
 }
 
 .prj-h1 {
-    padding-left: 12vh;
+    padding-left: 6rem;
     font-size: 2rem;
     margin: 0.8rem 0rem 0.3rem 0rem;
 }

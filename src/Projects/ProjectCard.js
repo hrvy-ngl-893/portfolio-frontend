@@ -52,6 +52,21 @@ const SkillIcons = {
 };
 
 function ProjectCard({ title, content, date, image, gradient1, gradient2, icon = [], lucide = [], tags = [], skills = [], color, theme, links = [] }) {
+    function capitalizeFirstLetter(string) {
+        if (string === 'amazonwebservices') {
+        return 'Amazon Web Services';
+        } if (string === 'javascript') {
+        return 'JavaScript';
+        } if (string === 'mysql') {
+        return 'MySQL';
+        } if (string === 'nextjs') {
+        return 'NextJS';
+        } if (string === 'vuejs') {
+        return 'VueJS';
+        } else {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+    }
     return (
         <div className="prj-card">
             <div className="card-overlay"
@@ -86,12 +101,14 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
                         <i
                             key={index}
                             className={`devicon-${i}-plain`}
-                            style={{ marginRight: '8px', fontSize: '2rem' }}
-                        />
+                            style={{ marginRight: '0.5rem', fontSize: '2rem', position: 'relative',}}
+                        >
+                            <span className="tooltiptext">{capitalizeFirstLetter(i)}</span>
+                        </i>
                     ))}
 
                     {lucide.map((IconComponent, index) => (
-                        <IconComponent key={index} className="lucide-icon"  style={{filter: `drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))`}}/>
+                        <IconComponent key={index} className="lucide-icon"  style={{filter: `drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5))`}}/>
                     ))}
                 </div>
                 <h1 className='card-h1'>{title}</h1>

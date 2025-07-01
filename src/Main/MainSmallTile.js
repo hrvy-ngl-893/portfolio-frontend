@@ -3,6 +3,15 @@ import React, { useMemo } from 'react';
 
 
 function MainSmallTile({ title, content, image, gradient1, gradient2, icon = [], lucide = [], color }) {
+    function capitalizeFirstLetter(string) {
+        if (string === 'amazonwebservices') {
+        return 'Amazon Web Services';
+        } if (string === 'javascript') {
+        return 'JavaScript';
+        } else {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+    }
     return (
         <>
             <div className="tile small">
@@ -19,13 +28,15 @@ function MainSmallTile({ title, content, image, gradient1, gradient2, icon = [],
                             <i
                                 key={index}
                                 className={`devicon-${i}-plain`}
-                                style={{ marginRight: '8px' }}
-                            />
+                                style={{ marginRight: '8px', position: 'relative',}}
+                            >
+                                <span className="tooltiptext">{capitalizeFirstLetter(i)}</span>
+                            </i>
                         ))}
                     </div>
                     <div className="tile-icons">
                         {lucide.map((IconComponent, index) => (
-                            <IconComponent key={index} className="lucide-icon" style={{filter: `drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5))`}}/>
+                            <IconComponent key={index} className="lucide-icon" style={{ filter: `drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5))` }} />
                         ))}
 
                     </div>

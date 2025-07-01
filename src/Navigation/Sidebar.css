@@ -75,15 +75,6 @@
     transition: all 0.2 ease;
 }
 
-:root[data-theme='light'] {
-    --clr: black;
-    --actv-hvr: rgba(0,0,0,0.15);
-}
-
-:root[data-theme='dark'] {
-    --clr: white;
-    --actv-hvr: rgba(255, 255, 255, 0.15);
-}
 @media screen and (max-width: 908px) {
     .btm-nav-item {
         color: var(--clr);

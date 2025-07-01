@@ -91,7 +91,7 @@ function ExperienceFilter({ sortOption, setSortOption, tagFilters, setTagFilters
                 {showFilter ?
                     <LiquidGlass
                         style={{
-                            top: '147px',
+                            top: '32vh',
                             left: 'calc(100% - 130px)',
                             transform: 'translate(-50%, 0%)',
                             transformOrigin: 'center',
@@ -114,14 +114,14 @@ function ExperienceFilter({ sortOption, setSortOption, tagFilters, setTagFilters
 
                         className={`filter-glass`}>
                         <div className='sort-label'>
-                            <label>
-                                Sort:
+
+                                <label htmlFor="sort22-select">Sort:</label>
                                 <select value={sortOption} onChange={handleSortChange}>
                                     <option value="id" className='select-default'>Default</option>
                                     <option value="title">Alphabetical</option>
                                     <option value="date">By Date</option>
                                 </select>
-                            </label>
+
                             <div className='filter-icon' onClick={toggleFilter}>
                                 <Filter  size={14} style={{  cursor: 'pointer', verticalAlign: 'middle' }} />
                             </div>
@@ -131,7 +131,7 @@ function ExperienceFilter({ sortOption, setSortOption, tagFilters, setTagFilters
                         <div className='filter-tags-container'>
                             <span>Filter Tags:</span>
                             {Object.values(Tags).map(tag => (
-                                <label key={tag} style={{ display: 'block' }}>
+                                <label key={tag} >
                                     <input
                                         className='filter-options'
                                         type="checkbox"

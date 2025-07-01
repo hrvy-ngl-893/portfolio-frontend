@@ -62,8 +62,8 @@ const projectsSoftware = [
         date: 2025,
         content: 'Augmented Reality app for simulating solar panel installation based on user\'s parameters. Won <b>third place</b> in the inaugural C2 Design Challenge competition of T.I.P. TechnoCoRe.',
         image: '/images/solAR.jpg',
-        gradient1: 'rgb(113, 129, 140) 30%',
-        gradient2: 'rgb(39, 43, 46) 100%',
+        gradient1: 'rgb(40, 55, 128) 30%',
+        gradient2: 'rgb(14, 20, 48) 100%',
         icon: ['swift', 'kotlin'],
         tags: ['Competition'],
         skills: ["Programming", "Speaking"],
@@ -159,7 +159,7 @@ const projectsHardware = [{
     title: 'Maze-solving Robot',
     date: 2024,
     content: 'Created a maze-solving robot using Arduino UNO with a suite of ultrasonic sensors in collaboration with Irish Roxas.',
-    image: '/images/inari.JPG',
+    image: '/images/robot.JPG',
     gradient1: 'rgba(50, 50, 50, 1) 70%',
     gradient2: 'rgb(35, 35, 35) 100%',
     icon: ['arduino'],
@@ -360,7 +360,7 @@ function Projects({ theme }) {
             </div>
             <LiquidGlass
                 style={{
-                    top: '6%',
+                    top: '54px',
                     left: '85px',
                     position: 'fixed',
                     display: 'inline',

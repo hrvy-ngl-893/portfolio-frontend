@@ -1,6 +1,6 @@
 import { Code, Laptop, Scale, School } from 'lucide-react';
 import './Experience.css'
-import './ExperienceCardContent.css'
+import './ExperienceCard.css'
 import React, { useRef, useEffect, useState, useMemo } from 'react';
 import ExperienceCard from './ExperienceCard';
 import ExperienceFilter from './ExperienceFilter';
@@ -118,65 +118,65 @@ function Experience({ theme }) {
     }, [sortOption, tagFilters]);
 
     return (
-        <div class="exp-container">
-            <div className='exp-toolbar'>
-                <LiquidGlass
-                    style={{
-                        top: '6%',
-                        left: '100px',
-                        position: 'fixed',
-                        display: 'inline',
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                        zIndex: 10,
-                        backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'}`,
-                        borderRadius: '60px',
+        <>
+            <div class="exp-container">
+                <div className='exp-card-container'>
 
-                    }}
-
-                    elasticity={0.5}
-                    displacementScale={0}
-                    blurAmount={0.05}
-                    saturation={140}
-                    aberrationIntensity={4}
-                    cornerRadius={60}
-                    padding="8px"
-
-                    className='header-title'>
-                    <h1 style={{ color: `${theme === 'light' ? 'black' : 'white'}`, textAlign: 'left', fontSize: '24px', margin: '4px 8px' }}>Experience</h1>
-                </LiquidGlass>
+                    {filteredAndSortedCards.map((card) => (
+                        <div key={card.id} id={card.id}>
+                            <ExperienceCard
+                                title={card.title}
+                                content={card.content}
+                                date={card.date}
+                                image={card.image}
+                                gradient1={card.gradient1}
+                                gradient2={card.gradient2}
+                                icon={card.icon}
+                                lucide={card.lucide}
+                                skills={card.skills}
+                                tags={card.tags}
+                                color={card.color}
+                                theme={theme}
+                                link={card.link}
+                            />
+                        </div>
+                    ))}
+                </div>
+                <ExperienceFilter
+                    sortOption={sortOption}
+                    setSortOption={setSortOption}
+                    tagFilters={tagFilters}
+                    setTagFilters={setTagFilters}
+                    theme={theme}
+                />
             </div>
 
-            <div className='exp-card-container'>
+            <LiquidGlass
+                style={{
+                    top: '6%',
+                    left: '100px',
+                    position: 'fixed',
+                    display: 'inline',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    zIndex: 13,
+                    backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'}`,
+                    borderRadius: '60px',
 
-                {filteredAndSortedCards.map((card) => (
-                    <div key={card.id} id={card.id}>
-                        <ExperienceCard
-                            title={card.title}
-                            content={card.content}
-                            date={card.date}
-                            image={card.image}
-                            gradient1={card.gradient1}
-                            gradient2={card.gradient2}
-                            icon={card.icon}
-                            lucide={card.lucide}
-                            skills={card.skills}
-                            tags={card.tags}
-                            color={card.color}
-                            theme={theme}
-                            link={card.link}
-                        />
-                    </div>
-                ))}
-            </div>
-            <ExperienceFilter
-                sortOption={sortOption}
-                setSortOption={setSortOption}
-                tagFilters={tagFilters}
-                setTagFilters={setTagFilters}
-                theme={theme}
-            />
-        </div>
+                }}
+
+                elasticity={0.5}
+                displacementScale={0}
+                blurAmount={0.05}
+                saturation={140}
+                aberrationIntensity={4}
+                cornerRadius={60}
+                padding="8px"
+
+                className='header-title'>
+                <h1 style={{ color: `${theme === 'light' ? 'black' : 'white'}`, textAlign: 'left', fontSize: '24px', margin: '4px 8px' }}>Experience</h1>
+            </LiquidGlass>
+        </>
 
     );
 }
