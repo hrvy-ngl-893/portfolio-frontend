@@ -33,7 +33,7 @@ function Main({theme}) {
 
                     <MainSmallTile
                         title="Developer"
-                        content="Computer Engineering undergraduate proficient in Swift, Python, and JavaScript."
+                        content="Proficient in Swift, Python, and JavaScript with professional experience, side projects, and competition-winning projects."
                         image="/images/code.jpeg"
                         gradient1="#23395d 70%"
                         gradient2="#17202b 100%"

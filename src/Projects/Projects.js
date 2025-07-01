@@ -31,7 +31,7 @@ const projectsSoftware = [
         image: '/images/inari.JPG',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
-        icon: ['mysql', 'javascript', 'react', 'docker'],
+        icon: ['mysql', 'javascript', 'react', 'docker', 'figma'],
         tags: ["Education"],
         skills: ["Programming", "Academics"],
         color: 'white',
@@ -101,6 +101,7 @@ const projectsSoftware = [
         skills: ["Programming"],
         color: 'white',
         links: [
+             {type: 'GitHub', url: 'https://github.com/hrvy-ngl-893/SpatialCapsule', of: 'Swift'}
         ]
     },
     {
@@ -116,6 +117,7 @@ const projectsSoftware = [
         skills: ["Programming"],
         color: 'white',
         links: [
+            {type: 'GitHub', url: 'https://github.com/hrvy-ngl-893/metro-mania', of: 'Swift'}
         ]
     },
         {
@@ -131,6 +133,7 @@ const projectsSoftware = [
         skills: ["Programming"],
         color: 'white',
         links: [
+            {type: 'GitHub', url: 'https://github.com/hrvy-ngl-893/portfolio-frontend/settings', of: 'Swift'}
         ]
     },
     {
@@ -186,7 +189,7 @@ const projectsArt = [
         title: 'Calligraphy',
         date: 2021,
         content: '.',
-        image: '/images/calligraphy.jpegds4',
+        image: '/images/calligraphy.jpeg',
         gradient1: 'rgb(164, 164, 164) 0%',
         gradient2: 'rgb(106, 104, 98) 100%',
         lucide: [Paintbrush],
@@ -211,6 +214,19 @@ const projectsArt = [
         date: 2025,
         content: '.',
         image: '/images/inari.JPG',
+        gradient1: 'rgba(50, 50, 50, 1) 70%',
+        gradient2: 'rgba(10, 10, 10, 1) 100%',
+        lucide: [Laptop, Code],
+        tags: ["Certification"],
+        skills: ["Photography", "Speaking"],
+        color: 'white',
+    },
+    {
+        id: 'prj-d4',
+        title: 'Graphic Design',
+        date: 2025,
+        content: '.',
+        image: '/images/cubao.jpeg',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
         lucide: [Laptop, Code],

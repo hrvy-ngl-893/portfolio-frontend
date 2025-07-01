@@ -90,7 +90,7 @@ function ExperienceCard({ title, content, date, image, gradient1, gradient2, ico
                     ))}
                 </div>
                 <h1 className='card-h1'>{title}</h1>
-                <span className='cart-subtitle'>EXPERIENCE DETAILS</span>
+                <span className='card-subtitle'>EXPERIENCE DETAILS</span>
                 <div className="card-tags">
                     <span className='tag date'>{date}</span>
                     {tags.map((t, index) => {
@@ -103,7 +103,7 @@ function ExperienceCard({ title, content, date, image, gradient1, gradient2, ico
                         );
                     })}
                 </div>
-                <span className='cart-subtitle'>SKILLS USED</span>
+                <span className='card-subtitle'>SKILLS USED</span>
                 <div className="card-tags">
                     {skills.map((s, index) => {
                         const SkillIcon = SkillIcons[s];

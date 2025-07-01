@@ -13,13 +13,13 @@ const cards = [
         content: 'Served T.I.P. Manila\'s students as the chief executive of the Supreme Student Council for A.Y. 2024-2025.',
         date: 2024,
         image: '/images/gavel.png',
-        gradient1: 'rgb(141, 135, 129) 100%',
-        gradient2: 'rgba(105, 94, 83,1) 100%',
+        gradient1: 'rgb(108, 104, 100) 100%',
+        gradient2: 'rgb(43, 41, 38) 100%',
         lucide: [School, Scale],
         tags: ["Leadership", "Certification"],
         skills: ["Interpersonal", "Speaking"],
         color: 'white',
-        link: 'http://www.google.com'
+        link: 'http://www.facebook.com/OfficialTIPManilaSSC'
     },
     {
         id: 'card-2',
@@ -27,8 +27,8 @@ const cards = [
         content: 'Hands-on in robotics, embedded systems, and innovation.',
         date: 2021,
         image: '/images/cubao.jpeg',
-        gradient1: 'rgb(255, 240, 227) 70%',
-        gradient2: 'rgb(255, 221, 198) 100%',
+        gradient1: 'rgb(132, 125, 119) 70%',
+        gradient2: 'rgb(49, 48, 48) 100%',
         lucide: [Laptop, Code],
         tags: ["Job"],
         skills: ["Programming", "Research"],
