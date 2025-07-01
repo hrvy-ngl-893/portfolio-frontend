@@ -1,15 +1,17 @@
 :root[data-theme='light'] {
     --bg-color: rgba(227, 240, 240, 1);
+    --bg-contrast: #000405;
     --bg-gradient: linear-gradient(
         to bottom,
-        #ddf4ff 0%,
-        #d8e3e5 50%,
-        #ececec 100%
+        #daf3ff 0%,
+        #d4f4fa 50%,
+        #cdeff1 100%
     );
 }
 
 :root[data-theme='dark'] {
     --bg-color: #121212;
+    --bg-contrast: rgba(231, 231, 231, 0.2);
     --bg-gradient: linear-gradient(
         to bottom,
         #031216 0%,

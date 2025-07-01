@@ -25,7 +25,7 @@ function MainSmallTile({ title, content, image, gradient1, gradient2, icon = [],
                     </div>
                     <div className="tile-icons">
                         {lucide.map((IconComponent, index) => (
-                            <IconComponent key={index} className="lucide-icon" />
+                            <IconComponent key={index} className="lucide-icon" style={{filter: `drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5))`}}/>
                         ))}
 
                     </div>

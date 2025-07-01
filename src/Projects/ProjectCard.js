@@ -62,7 +62,6 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
             <div className="card-image-mask"
                 style={{ backgroundImage: `url(${image})` }}
             />
-            <div className="card-overlay2" />
             <div className="card-content" style={{ color: color }}>
                 {links.length > 0 && (
                     <div className="card-links">
@@ -87,17 +86,17 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
                         <i
                             key={index}
                             className={`devicon-${i}-plain`}
-                            style={{ marginRight: '8px', fontSize: '32px' }}
+                            style={{ marginRight: '8px', fontSize: '2rem' }}
                         />
                     ))}
 
                     {lucide.map((IconComponent, index) => (
-                        <IconComponent key={index} className="lucide-icon" />
+                        <IconComponent key={index} className="lucide-icon"  style={{filter: `drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))`}}/>
                     ))}
                 </div>
                 <h1 className='card-h1'>{title}</h1>
             
-                <span className='cart-subtitle'>PROJECT DETAILS</span>
+                <span className='card-subtitle'>PROJECT DETAILS</span>
                 <div className="card-tags">
                     
                     <span className='tag date' style={{ display: `${date !== null ? 'block' : 'none' }`}}>{date}</span>
@@ -111,7 +110,7 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
                         );
                     })}
                 </div>
-                <span className='cart-subtitle'>SKILLS USED</span>
+                <span className='card-subtitle'>SKILLS USED</span>
                 <div className="card-tags">
                     {skills.map((s, index) => {
                         const SkillIcon = SkillIcons[s];

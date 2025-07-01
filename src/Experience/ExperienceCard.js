@@ -86,7 +86,7 @@ function ExperienceCard({ title, content, date, image, gradient1, gradient2, ico
                     ))}
 
                     {lucide.map((IconComponent, index) => (
-                        <IconComponent key={index} className="lucide-icon" />
+                        <IconComponent key={index} className="lucide-icon" style={{filter: `drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))`}}/>
                     ))}
                 </div>
                 <h1 className='card-h1'>{title}</h1>

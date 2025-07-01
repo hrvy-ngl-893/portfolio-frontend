@@ -60,15 +60,27 @@
     transition: all 0.2s ease;
 }
 
-.card-link {
+.exp-card .card-link {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
 }
+.card-h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-p {
+    margin: 0;
+  font-size: clamp(1rem, 7vw, 0.5rem); 
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  max-height: 100%; 
+}
 
 
-
-.card-link a {
+.exp-card .card-link a {
     display: flex;
     flex-direction: row;
     padding: 8px 12px;
@@ -82,17 +94,17 @@
     width: fit-content;
 }
 
-.card-link a:hover {
+.exp-card .card-link a:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
     transition: all 0.4s ease;
 }
 
-.card-spacer {
+.exp-card .card-spacer {
     flex-grow: 1;
 }
 
-.card-content {
+.exp-card .card-content {
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -127,7 +139,7 @@
     background-color: rgba(114, 179, 236, 0.50);
 }
 
-.card-subtitle {
+.exp-card .card-subtitle {
     font-size: 10px;
     font-weight: bold;
     color: rgb(240,240,240);
@@ -209,22 +221,20 @@
 }
 
 
-
-
 @media screen and (max-width: 908px) {
     .card-content {
         padding: 16px;
     }
 }
 
-.card-overlay {
+.exp-card .card-overlay {
     position: absolute;
     inset: 0;
     z-index: 0;
     border-radius: 16px;
 }
 
-.card-image-mask {
+.exp-card .card-image-mask {
     position: absolute;
     inset: 0;
     background-size: cover;

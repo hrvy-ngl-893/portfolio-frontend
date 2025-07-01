@@ -23,7 +23,7 @@ function Main({theme}) {
                         />
                         <div className="tile-content" style={{ color: 'white' }}>
                             <div className="tile-icons">
-                                <Globe className="lucide-icon" />
+                                <Globe className="lucide-icon" style={{filter: `drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5))`}} />
                             </div>
                             <h1 className='tile-h1'>Hello, World</h1>
                             <p className='tile-p'>My name is <b>Harvy Angelo D. Tan</b>. Welcome to my <b>portfolio</b>.</p>

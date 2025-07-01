@@ -10,7 +10,7 @@ const cards = [
     {
         id: 'card-1',
         title: 'SSC President',
-        content: 'Served T.I.P. Manila\'s students as the chief executive of the Supreme Student Council for A.Y. 2024-2025.',
+        content: 'Served T.I.P. Manila\'s students as the chief executive of the Supreme Student Council for A.Y. 2024-2025.Served T.I.P. Manila\'s students as the chief executive of the Supreme Student Council for A.Y. 2024-2025.Served T.I.P. Manila\'s students as the chief executive of the Supreme Student Council for A.Y. 2024-2025.Served T.I.P. Manila\'s students as the chief executive of the Supreme Student Council for A.Y. 2024-2025.Served T.I.P. Manila\'s students as the chief executive of the Supreme Student Council for A.Y. 2024-2025.Served T.I.P. Manila\'s students as the chief executive of the Supreme Student Council for A.Y. 2024-2025.Served T.I.P. Manila\'s students as the chief executive of the Supreme Student Council for A.Y. 2024-2025.Served T.I.P. Manila\'s students as the chief executive of the Supreme Student Council for A.Y. 2024-2025.',
         date: 2024,
         image: '/images/gavel.png',
         gradient1: 'rgb(108, 104, 100) 100%',
