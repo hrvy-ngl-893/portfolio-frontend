@@ -2,7 +2,7 @@
 import './Projects.css'
 import './ProjectCard.css'
 import LiquidGlass from 'liquid-glass-react';
-import { Laptop, Code } from 'lucide-react';
+import { Laptop, Code, Paintbrush2, Paintbrush } from 'lucide-react';
 import React, { useRef, useEffect, useState, useMemo } from 'react';
 import ProjectCard from './ProjectCard.js';
 import { SiJavascript } from '@icons-pack/react-simple-icons';
@@ -20,7 +20,7 @@ const projectsSoftware = [
         skills: ["Programming", "Academics"],
         color: 'white',
         links: [
-            {type: 'Github', url: 'https://github.com/hrvy-ngl-893/hanappv1', of: 'Backend'},
+            {type: 'GitHub', url: 'https://github.com/hrvy-ngl-893/hanappv1', of: 'Backend'},
         ]
     },
     {
@@ -36,15 +36,15 @@ const projectsSoftware = [
         skills: ["Programming", "Academics"],
         color: 'white',
         links: [
-            {type: 'Github', url: 'https://github.com/hrvy-ngl-893/hanapp_v2', of: 'Backend'},
-            {type: 'Github', url: 'https://github.com/hekseydis/hanappv2-website', of: 'Frontend'},
+            {type: 'GitHub', url: 'https://github.com/hrvy-ngl-893/hanapp_v2', of: 'Backend'},
+            {type: 'GitHub', url: 'https://github.com/hekseydis/hanappv2-website', of: 'Frontend'},
         ]
     },
     {
         id: 'prj-s3',
         title: 'LRY Marketing Dashboard',
         date: 2024,
-        content: 'Full-stack software solution optimized for SEO business management and content tracking for an Australia-based company.',
+        content: 'Full-stack software solution for SEO business management and content tracking for an Australia-based company.',
         image: '/images/inari.JPG',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
@@ -60,7 +60,7 @@ const projectsSoftware = [
         id: 'prj-s4',
         title: 'SolAR',
         date: 2025,
-        content: 'Augmented Reality app that immerses users in a simulation of a solar panel installation based on their set parameters. Won <b>third place</b> in the inaugural C2 Design Challenge competition of T.I.P. TechnoCoRe.',
+        content: 'Augmented Reality app for simulating solar panel installation based on user\'s parameters. Won <b>third place</b> in the inaugural C2 Design Challenge competition of T.I.P. TechnoCoRe.',
         image: '/images/sunset.jpeg',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
@@ -69,8 +69,8 @@ const projectsSoftware = [
         skills: ["Programming", "Speaking"],
         color: 'white',
         links: [
-            {type: 'Github', url: 'https://github.com/hrvy-ngl-893/solAR', of: 'Swift'},
-            {type: 'Github', url: 'https://github.com/jmsabt/arTesting.git', of: 'Kotlin'},
+            {type: 'GitHub', url: 'https://github.com/hrvy-ngl-893/solAR', of: 'Swift'},
+            {type: 'GitHub', url: 'https://github.com/jmsabt/arTesting.git', of: 'Kotlin'},
         ]
     },
         {
@@ -118,6 +118,36 @@ const projectsSoftware = [
         links: [
         ]
     },
+        {
+        id: 'prj-s8',
+        title: 'Personal Portfolio',
+        date: 2025,
+        content: '.',
+        image: '/images/sunset.jpeg',
+        gradient1: 'rgba(50, 50, 50, 1) 70%',
+        gradient2: 'rgba(10, 10, 10, 1) 100%',
+        icon: ['react'],
+        tags: ['Education'],
+        skills: ["Programming"],
+        color: 'white',
+        links: [
+        ]
+    },
+    {
+        id: 'prj-s9',
+        title: 'Chatbox Burner',
+        date: 2025,
+        content: '.',
+        image: '/images/sunset.jpeg',
+        gradient1: 'rgba(50, 50, 50, 1) 70%',
+        gradient2: 'rgba(10, 10, 10, 1) 100%',
+        icon: ['mysql','javascript','react','python','django', 'docker'],
+        tags: ['Education'],
+        skills: ["Programming"],
+        color: 'white',
+        links: [
+        ]
+    },
 ]
 
 const projectsHardware = [    {
@@ -151,11 +181,35 @@ const projectsPublication = [
 ]
 
 const projectsArt = [
-        {
-        id: 'prj-20',
-        title: 'thre',
+    {
+        id: 'prj-d1',
+        title: 'Calligraphy',
         date: 2021,
-        content: 'Hands-on in robotics, embedded systems, and innovation.',
+        content: '.',
+        image: '/images/calligraphy.jpegds4',
+        gradient1: 'rgb(164, 164, 164) 0%',
+        gradient2: 'rgb(106, 104, 98) 100%',
+        lucide: [Paintbrush],
+        skills: ["Art"],
+        color: 'white',
+    },
+    {
+        id: 'prj-d2',
+        title: 'Photography',
+        date: 2021,
+        content: '.',
+        image: '/images/overpass.jpeg',
+        gradient1: 'rgba(50, 50, 50, 1) 70%',
+        gradient2: 'rgba(10, 10, 10, 1) 100%',
+        lucide: [Laptop, Code],
+        skills: ["Photography", "Speaking"],
+        color: 'white',
+    },
+    {
+        id: 'prj-d3',
+        title: 'UI/UX',
+        date: 2025,
+        content: '.',
         image: '/images/inari.JPG',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
@@ -165,9 +219,8 @@ const projectsArt = [
         color: 'white',
     },
 ]
+
 function Projects({ theme }) {
-
-
     return (
         <>
             <div className="projects-container">

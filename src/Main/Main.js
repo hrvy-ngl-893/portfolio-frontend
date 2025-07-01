@@ -42,7 +42,7 @@ function Main({theme}) {
                     />
                     <MainSmallTile
                         title="Scholar"
-                        content="Involved in research, hackathons, and a DOST scholar."
+                        content="A DOST Scholar involved in research, hackathons, and undergraduate studies taking up BS Computer Engineering at T.I.P. Manila."
                         image="/images/slc.jpeg"
                         gradient1="rgb(224, 211, 136) 70%"
                         gradient2="rgb(122, 102, 47) 100%"
@@ -51,7 +51,7 @@ function Main({theme}) {
                     />
                     <MainMediumTile
                         title="Creative"
-                        content="I like to make things on the side. Mostly photography and digital graphics. Music production and writing sometimes."
+                        content="I like to make things on the side. Mostly photography and digital graphics. Music production and writing sometimes. I also like to do Japanese Calligraphy."
                         image="/images/calligraphy.jpeg"
                         gradient1="rgba(255, 250, 240, 1) 0%"
                         gradient2="rgba(176, 171, 160, 1) 100%"

@@ -27,7 +27,7 @@ function GithubButton({ link, of, theme }) {
                         className='button-icon'
                     />
                     <div className='stacked-btn-text'>
-                    <span style={{verticalAlign: 'center',textDecoration: 'none',textAlign:'center',}} className='button-title'>Github</span>
+                    <span style={{verticalAlign: 'center',textDecoration: 'none',textAlign:'center',}} className='button-title'>GitHub</span>
                     <span style={{verticalAlign: 'center',textDecoration: 'none',textAlign:'center',}} className='button-subtitle'>{of.toUpperCase()}</span>
                     </div>
                 </a>

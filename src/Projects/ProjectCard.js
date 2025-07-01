@@ -39,16 +39,16 @@ const TagIcons = {
 };
 
 const SkillIcons = {
-    Programming: Code2,           // 🖥️ Represents coding
-    Research: Microscope,        // 🔬 Obvious symbol for research
-    Interpersonal: MessageCircle, // 💬 Communication symbol
-    Speaking: Mic,         // 🎤 Microphone
-    Music: Music,                // 🎵 Music note
-    Art: Brush,                  // 🖌️ For visual art
-    Writing: Pencil,             // ✏️ Pencil for writing
-    Photography: Camera,         // 📷 Obvious
-    Design: Palette,             // 🎨 Color palette
-    Academics: BookPlus,         // 📖 For study/learning
+    Programming: Code2,
+    Research: Microscope,
+    Interpersonal: MessageCircle,
+    Speaking: Mic,
+    Music: Music,
+    Art: Brush,
+    Writing: Pencil,
+    Photography: Camera,
+    Design: Palette,
+    Academics: BookPlus,
 };
 
 function ProjectCard({ title, content, date, image, gradient1, gradient2, icon = [], lucide = [], tags = [], skills = [], color, theme, links = [] }) {
@@ -69,7 +69,7 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
                         <div className="link-spacer" />
 
                         {links.map((link, index) => {
-                            if (link.type === 'Github') {
+                            if (link.type === 'GitHub') {
                                 return <GithubButton key={index} link={link.url} of={link.of} theme={theme} />;
                             } else if (link.type === 'View') {
                                 return <ViewButton key={index} link={link.url} of={link.of} theme={theme} />;
@@ -96,9 +96,11 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
                     ))}
                 </div>
                 <h1 className='card-h1'>{title}</h1>
-                <span className='cart-subtitle'>DATE</span>
+            
+                <span className='cart-subtitle'>PROJECT DETAILS</span>
                 <div className="card-tags">
-                    <span className='tag date'>{date}</span>
+                    
+                    <span className='tag date' style={{ display: `${date !== null ? 'block' : 'none' }`}}>{date}</span>
                     {tags.map((t, index) => {
                         const TagIcon = TagIcons[t];
                         return (
@@ -128,25 +130,3 @@ function ProjectCard({ title, content, date, image, gradient1, gradient2, icon =
     );
 }
 export default ProjectCard;
-
-/*
-    const themedGradient = useMemo(() => {
-        return theme === 'light'
-            ? 'rgb(255, 255, 255) 70%'
-            : '#121212 70%';
-    }, [theme]);
-
-    const themedGradient2 = useMemo(() => {
-        return theme === 'light'
-            ? 'rgb(225, 225, 225) 100%'
-            : 'rgb(20, 20, 20) 100%';
-    }, [theme]);
-
-
-    const themedColor = useMemo(() => {
-        return theme === 'light'
-            ? 'black'
-            : 'white';
-    }, [theme]);
-
-*/

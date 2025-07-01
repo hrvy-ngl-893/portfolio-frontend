@@ -84,7 +84,17 @@
 .card-p {
     margin: 0;
     font-size: 18px;
+    
 }
+
+
+.card-p {
+  font-size: clamp(14px, 100%, 18px); 
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  max-height: 100%; 
+}
+
 
 a {
     text-decoration: none !important;

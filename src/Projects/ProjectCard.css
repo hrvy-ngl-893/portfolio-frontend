@@ -83,11 +83,11 @@
     background-color: rgba(114, 179, 236, 0.50);
 }
 
-.cart-subtitle {
+.card-subtitle {
     font-size: 10px;
     font-weight: bold;
     color: rgb(240, 240, 240);
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
     margin: 0px 0px 4px 0px;
 }
 
