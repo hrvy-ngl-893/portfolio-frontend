@@ -58,7 +58,7 @@ function ExperienceFilter({ sortOption, setSortOption, tagFilters, setTagFilters
                 {!showFilter ?
                     <LiquidGlass
                         style={{
-                            top: '49px',
+                            top: 'calc(100% - 94vh)',
                             left: 'calc(100% - 40px)',
                             transform: 'translate(-50%, 0%)',
                             transformOrigin: 'center',
@@ -91,8 +91,8 @@ function ExperienceFilter({ sortOption, setSortOption, tagFilters, setTagFilters
                 {showFilter ?
                     <LiquidGlass
                         style={{
-                            top: '32vh',
-                            left: 'calc(100% - 130px)',
+                            top: 'calc(100% - 82.26vh)',
+                            left: 'calc(100% - 7.78rem)',
                             transform: 'translate(-50%, 0%)',
                             transformOrigin: 'center',
                             position: 'fixed',
@@ -123,7 +123,7 @@ function ExperienceFilter({ sortOption, setSortOption, tagFilters, setTagFilters
                                 </select>
 
                             <div className='filter-icon' onClick={toggleFilter}>
-                                <Filter  size={14} style={{  cursor: 'pointer', verticalAlign: 'middle' }} />
+                                <Filter  size={14} style={{  cursor: 'pointer', verticalAlign: 'middle', margin: '-0.3rem 0 0 0.5rem' }} />
                             </div>
                         </div>
                         
