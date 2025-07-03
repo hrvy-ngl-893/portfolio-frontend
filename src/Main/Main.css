@@ -129,6 +129,7 @@
     .tile {
         margin-bottom: 2rem;
         height: 50vh;
+        min-height: 20rem;
     }
 
     .tile-content {

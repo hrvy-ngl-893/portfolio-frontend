@@ -77,10 +77,10 @@ const projectsSoftware = [
         id: 'prj-s5',
         title: 'RiceFlow',
         date: 2025,
-        content: '.',
-        image: '/images/sunset.jpeg',
-        gradient1: 'rgba(50, 50, 50, 1) 70%',
-        gradient2: 'rgba(10, 10, 10, 1) 100%',
+        content: 'Competed against other universities in the Philippines during the 2025 Metal & Engineering Week hosted by DOST-MIRDC. RiceFlow, an irrigation automation system, won third place in the IoT Technology Pitching Competition organized by MRSP.',
+        image: '/images/riceflow.jpg',
+        gradient1: 'rgb(151, 149, 138) 70%',
+        gradient2: 'rgb(110, 110, 104) 100%',
         icon: ['swift'],
         tags: ['Competition'],
         skills: ["Programming", "Speaking"],
@@ -92,7 +92,7 @@ const projectsSoftware = [
         id: 'prj-s6',
         title: 'Spatial Capsule',
         date: 2025,
-        content: '.',
+        content: 'An entry to the 2025 Swift Student Challenge that allows users to save "memories" in real space and virtually interact with their memory capsules.',
         image: '/images/sunset.jpeg',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
@@ -108,10 +108,10 @@ const projectsSoftware = [
         id: 'prj-s7',
         title: 'Metro Mania',
         date: 2025,
-        content: '.',
-        image: '/images/sunset.jpeg',
-        gradient1: 'rgba(50, 50, 50, 1) 70%',
-        gradient2: 'rgba(10, 10, 10, 1) 100%',
+        content: 'An entry to the 2025 Swift Student Challenge that simulates the projected carbon emissions and traffic congestion of different transport modes in Metro Manila.',
+        image: '/images/commute.jpeg',
+        gradient1: 'rgb(33, 40, 32) 70%',
+        gradient2: 'rgb(24, 25, 22) 100%',
         icon: ['swift'],
         tags: ['Competition'],
         skills: ["Programming"],
@@ -124,8 +124,8 @@ const projectsSoftware = [
         id: 'prj-s8',
         title: 'Personal Portfolio',
         date: 2025,
-        content: '.',
-        image: '/images/sunset.jpeg',
+        content: 'This page. Pretty cool, right? Uses React with certain packages, including LiquidGlass, Lucide Icons, and more. Seriously, look at how the glass bends light and the chromatic aberration. Cool stuff.',
+        image: '/images/manila.jpeg',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
         icon: ['react'],
@@ -133,18 +133,18 @@ const projectsSoftware = [
         skills: ["Programming"],
         color: 'white',
         links: [
-            { type: 'GitHub', url: 'https://github.com/hrvy-ngl-893/portfolio-frontend/settings', of: 'Frontend' }
+            { type: 'GitHub', url: 'https://github.com/hrvy-ngl-893/portfolio-frontend', of: 'Frontend' }
         ]
     },
     {
         id: 'prj-s9',
         title: 'Chatbox Burner',
         date: 2025,
-        content: '.',
+        content: 'Live, non-persistent web chatting applciation developed for CPE 408 - Emerging Technologies.',
         image: '/images/sunset.jpeg',
         gradient1: 'rgba(50, 50, 50, 1) 70%',
         gradient2: 'rgba(10, 10, 10, 1) 100%',
-        icon: ['mysql', 'javascript', 'react', 'python', 'django', 'docker'],
+        icon: ['mysql', 'javascript', 'react', 'python', 'django', 'docker', 'figma'],
         tags: ['Education'],
         skills: ["Programming"],
         color: 'white',
@@ -158,7 +158,7 @@ const projectsHardware = [{
     id: 'prj-9',
     title: 'Maze-solving Robot',
     date: 2024,
-    content: 'Created a maze-solving robot using Arduino UNO with a suite of ultrasonic sensors in collaboration with Irish Roxas.',
+    content: 'Created a maze-solving robot using Arduino UNO with a suite of ultrasonic sensors in collaboration with Irish Roxas for CPE 317 - Mixed Signals and Sensors course.',
     image: '/images/robot.JPG',
     gradient1: 'rgba(50, 50, 50, 1) 70%',
     gradient2: 'rgb(35, 35, 35) 100%',
@@ -175,11 +175,14 @@ const projectsPublication = [
         date: 2021,
         content: 'Fingerprint-enabled student locker system research published in IEEE.',
         image: '/images/clouds.jpg',
-        gradient1: 'rgba(50, 50, 50, 1) 70%',
-        gradient2: 'rgba(10, 10, 10, 1) 100%',
+        gradient1: 'rgb(92, 92, 92) 70%',
+        gradient2: 'rgb(62, 65, 64) 100%',
         lucide: [Laptop, Code],
         skills: ["Academics", "Writing"],
         color: 'white',
+        links: [
+            {type: 'View', url: 'https://ieeexplore.ieee.org/document/10459619/', of: 'Research'}
+        ]
     },
     {
         id: 'prj-p2',
@@ -192,6 +195,9 @@ const projectsPublication = [
         lucide: [Laptop, Code],
         skills: ["Academics", "Writing"],
         color: 'white',
+        links: [
+            {type: 'View', url: '/pdf/Identifying Express Stops for Manila LRT-Line 2.pdf', of: 'Research'}
+        ]
     },
 ]
 
@@ -299,7 +305,7 @@ function Projects({ theme }) {
                                         tags={card.tags}
                                         color={card.color}
                                         theme={theme}
-                                        link={card.link}
+                                        links={card.links}  
                                     />
                                 </div>
                             ))}
@@ -324,7 +330,7 @@ function Projects({ theme }) {
                                         tags={card.tags}
                                         color={card.color}
                                         theme={theme}
-                                        link={card.link}
+                                        links={card.links}
                                     />
                                 </div>
                             ))}
@@ -349,7 +355,7 @@ function Projects({ theme }) {
                                         tags={card.tags}
                                         color={card.color}
                                         theme={theme}
-                                        link={card.link}
+                                        links={card.links}
                                     />
                                 </div>
                             ))}
