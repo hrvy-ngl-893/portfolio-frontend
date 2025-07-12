@@ -14,7 +14,7 @@ function Main({theme}) {
                     <div className="tile large" >
                         <div className="tile-overlay"
                             style={{
-                                background: `linear-gradient(to bottom,rgb(93, 35, 35) 60%,rgb(43, 23, 23) 100%)`
+                                background: `linear-gradient(to bottom,rgb(93, 35, 35) 70%,rgb(43, 23, 23) 100%)`
                             }}
                         />
                         <div
@@ -71,7 +71,7 @@ function Main({theme}) {
             </div>
             <LiquidGlass
                     style={{
-                        top: '6%',
+                        top: '50px',
                         left: '70px',
                         position: 'fixed',
                         display: 'inline',

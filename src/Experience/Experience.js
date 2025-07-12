@@ -153,13 +153,13 @@ function Experience({ theme }) {
 
             <LiquidGlass
                 style={{
-                    top: '6%',
+                    top: '50px',
                     left: '100px',
                     position: 'fixed',
                     display: 'inline',
                     flexDirection: 'row',
                     justifyContent: 'center',
-                    zIndex: 13,
+                    zIndex: 130,
                     backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'}`,
                     borderRadius: '60px',
 

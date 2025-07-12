@@ -7,7 +7,7 @@ function TopBarLinks({ theme }) {
             <LiquidGlass
                 style={{
                     position: 'fixed',
-                    top: '6%',
+                    top: '50px',
                     left: 'calc(100% - 104px)',
                     zIndex: 10,
                     backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.0)'}`,
@@ -37,7 +37,7 @@ function TopBarLinks({ theme }) {
             <LiquidGlass
                 style={{
                     position: 'fixed',
-                    top: '6%',
+                    top: '50px',
                     left: 'calc(100% - 164px)',
                     zIndex: 10,
                     backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.0)'}`,
@@ -67,7 +67,7 @@ function TopBarLinks({ theme }) {
             <LiquidGlass
                 style={{
                     position: 'fixed',
-                    top: '6%',
+                    top: '50px',
                     left: 'calc(100% - 44px)',
                     zIndex: 10,
                     backgroundColor: `${theme === 'light' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.0)'}`,

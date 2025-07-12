@@ -28,7 +28,7 @@ const resourceTiles = [
         title: 'Curriculum Vitae',
         date: 2024,
         content: 'Something to read.',
-        image: '/images/hanappv2.png',
+        image: '/images/clouds.jpg',
         gradient1: 'rgb(90, 87, 74) 30%',
         gradient2: 'rgb(64, 62, 53) 100%',
         lucide: [GraduationCap],
@@ -44,7 +44,7 @@ const resourceTiles = [
         title: 'Photo',
         date: 2024,
         content: 'Use for professional purposes or on inviataions. Crop as needed. Do not distort.',
-        image: '/images/hanappv2.png',
+        image: '/images/inari.JPG',
         gradient1: 'rgb(90, 87, 74) 30%',
         gradient2: 'rgb(64, 62, 53) 100%',
         lucide: [UserSquare],
@@ -116,15 +116,17 @@ function Resources({ theme }) {
                             />
                         </div>
                     ))}
-                    <div className="card-spacer"/>
+
                 </div>
-                
+
+
+
             </div>
 
-
+            <TopBarLinks theme={theme} />
             <LiquidGlass
                 style={{
-                    top: '6%',
+                    top: '50px',
                     left: '95px',
                     position: 'fixed',
                     display: 'inline',
@@ -150,7 +152,7 @@ function Resources({ theme }) {
 
             {/* <PDFViewer file={selectedFile}/> */}
 
-            <TopBarLinks theme={theme} />
+
         </>
     );
 }

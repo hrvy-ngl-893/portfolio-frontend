@@ -1,29 +1,37 @@
-.resource-glass {
-    position: fixed !important;
-    margin-top: -100vh;
-    margin-left: 50%;
-}
-
-
 .resources-container {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+    width: 100%;
     height: 100vh;
+    position: absolute;
+
+
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
-    overflow: hidden !important;
-    display: flex !important;
-    align-items: center;
+
+
+
     justify-content: flex-start;
-    z-index: 0;
+
+
+
+    transition: transform 0.2s ease-in;
+    will-change: transform;
+    contain: layout paint style;
 }
 
 .resources-tile-container {
-    padding: 12vh 6vh 6vh 12vh;
+    padding: 14vh 4vh 16vh 14vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
     grid-gap: 2vw;
+    height: 100%;
     z-index: 1;
+    overflow: hidden;
 }
 
 .resources-tile {
@@ -35,8 +43,9 @@
     justify-content: space-between;
     border-radius: 1rem;
     padding: 0;
-    overflow: hidden;
-    height: 36vh;
+
+    aspect-ratio: 1 / 1;
+    height: 100%;
 
     background-size: cover !important;
     background-position: center center !important;
@@ -88,6 +97,10 @@
     transition: all 0.2s ease;
 }
 
+.resources-tile:hover {
+    scale: 1.02;
+}
+
 .resource-tile-content {
     display: flex;
     flex-direction: column;
@@ -98,20 +111,27 @@
     height: 100%;
 }
 
-.resources-tile .card-spacer {   
+.resources-tile .card-spacer {
     flex-grow: 1;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1336px) {
     .resources-tile-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        padding: 12vh 4vh 4vh 12vh;
+        padding: 14vh 4vh 16vh 14vh;
         transition: all 0.2s ease;
+        overflow: auto;
     }
+}
 
-    .tile-content {
-        padding: 1rem;
+@media screen and (max-width: 1000px) {
+    .resources-tile-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 14vh 4vh 16vh 14vh;
+        transition: all 0.2s ease;
+        overflow: auto;
     }
 }
 
@@ -119,13 +139,23 @@
     .resources-tile-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: 12vh 4vh 4vh 4vh;
+        padding: 14vh 4vh 16vh 4vh;
         transition: all 0.2s ease;
+        grid-gap: 2rem;
         overflow: auto;
-        height: min-content;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .resources-container {
+        height: fit-content;
     }
 
-    .tile-content {
-        padding: 1rem;
+    .resources-tile-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 14vh 4vh 16vh 4vh;
+        transition: all 0.2s ease;
+        overflow: auto;
     }
 }

@@ -58,7 +58,7 @@ function ExperienceFilter({ sortOption, setSortOption, tagFilters, setTagFilters
                 {!showFilter ?
                     <LiquidGlass
                         style={{
-                            top: 'calc(100% - 94vh)',
+                            top: '51px',
                             left: 'calc(100% - 40px)',
                             transform: 'translate(-50%, 0%)',
                             transformOrigin: 'center',
